@@ -49,4 +49,15 @@ public class Address {
     public void setPostalAddress(long postalAddress) {
         this.postalAddress = postalAddress;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "phoneNumber='" + phoneNumber + '\'' +
+                ", postalCode=" + postalCode +
+                ", email='" + email + '\'' +
+                ", Town='" + Town + '\'' +
+                ", postalAddress=" + postalAddress +
+                '}';
+    }
 }

@@ -31,9 +31,11 @@
     <div class="row">
         <div class="col-8">
             <a href="addBook"><button type="submit" class="btn btn-info">Add Book</button></a>
-            <a href="allBooks"><button type="submit" class="btn btn-info">Borrow Book</button></a>
-            <a href="allBooks"><button type="submit" class="btn btn-info">Books Available</button></a>
-            <a href="allBooks"><button type="submit" class="btn btn-info">Books Not Available</button></a>
+            <a href="books"><button type="submit" class="btn btn-info">Borrow Book</button></a>
+            <a href="stuDetails"><button type="submit" class="btn btn-info">Student Lib Details</button></a>
+            <a href="api/books/getAvailableBooks"><button type="submit" class="btn btn-info">Books Available</button></a>
+            <a href="api/books/getBookBorrowed"><button type="submit" class="btn btn-info">Books Not Available</button></a>
+            <a href="api/books/list"><button type="submit" class="btn btn-info">All Books</button></a>
 
 
 

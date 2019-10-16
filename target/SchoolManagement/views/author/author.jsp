@@ -30,7 +30,7 @@
     <br>
     <%--Add author--%>
 
-    <% if (action.equalsIgnoreCase("add")) {%>
+    <% if (action.equalsIgnoreCase("edit")) {%>
     Author Name : <input type="text" name="authorName"
                          value="<c:out value="${author.name}" />" readonly="readonly"/> (You Can't Change this)<br />
     <%} else {%>

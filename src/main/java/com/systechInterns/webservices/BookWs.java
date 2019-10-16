@@ -2,16 +2,24 @@ package com.systechInterns.webservices;
 
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.systechInterns.Beans.BookBeanI;
+import com.systechInterns.config.Util;
+import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
+import com.systechInterns.studentmodule.Student;
 
 import javax.ejb.EJB;
+import javax.ejb.Local;
+import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
 
+@Stateless
+@Local
 @Path("/books")
 public class BookWs {
 
@@ -22,11 +30,15 @@ public class BookWs {
     @POST
     @Path("/add")
     public Response add(String json){
-        Book book = new Gson().fromJson(json,Book.class);
-        book = bookBeanI.add(book);
-        JsonParser jp = new JsonParser();
-        jp.parse(json).getAsJsonArray();
-        return Response.ok().entity(book).build();
+        try {
+            Book book = new Gson().fromJson(json,Book.class);
+            book = bookBeanI.add(book);
+            return Response.ok().entity(book).build();
+        }catch (Exception e){
+            System.out.println("got an error adding book");
+            e.printStackTrace();
+        }
+        return  null;
 
     }
 
@@ -78,6 +90,16 @@ public class BookWs {
     @Path("/getBookBorrowed")
     public Response getBorrowedBook(){
         return Response.ok().entity(bookBeanI.getBorrowedBooks()).build();
+
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{bookName}/getBookByTitle")
+    public Response getBookByTitle(@PathParam("bookName") String json){
+        JsonParser jp = new JsonParser();
+        String title = jp.parse(json).getAsJsonObject().get("bookName").getAsString();
+        return Response.ok().entity(bookBeanI.findByName(title)).build();
     }
 
     @GET
@@ -87,5 +109,15 @@ public class BookWs {
         return Response.ok().entity(bookBeanI.getAvailableBooks()).build();
     }
 
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/searchBook")
+    public Response searchBook(String json) throws SearchedBookNotFoundException {
+        JsonParser jp = new JsonParser();
+        JsonObject jsonObject = jp.parse(json).getAsJsonObject();
+        String bookIsbn = jsonObject.get("bookIsbn").getAsString();
+
+        return Response.ok().entity(bookBeanI.getIsbn(new Gson().toJson(bookIsbn))).build();
+    }
 
 }

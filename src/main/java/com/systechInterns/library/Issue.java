@@ -1,13 +1,21 @@
 package com.systechInterns.library;
 
 
+import com.systechInterns.studentmodule.Student;
+
+import javax.json.bind.annotation.JsonbDateFormat;
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "NQ_FIND_STUDENT",query = "select s from Student s where  s.id = : id")
-//        @NamedQuery(name = "NQ_FIND_BOOK_BORROWED",query = "select m from Book m where m.isAvailable = false")
+        @NamedQuery(name = "NQ_FIND_ALL_ISSUES",query = "select s from Issue s"),
+        @NamedQuery(name = "NQ_SELECT_STUDENT_ISSUES",query = "select s from Issue s where s.studentId = : studentId"),
+        @NamedQuery(name = "NQ_DELETE_STUDENT_ISSUES",query = "select s from Issue s where s.studentId = : studentId"),
+        @NamedQuery(name = "NQ_GET_STUDENT_ID",query = "select s from Issue s where s.studentId = : studentId"),
+        @NamedQuery(name = "NQ_GET_AND_ISBN",query = "select s from Issue s where s.studentId = : studentId and s.book.isbn=:bookIsbn"),
+        @NamedQuery(name = "NQ_DELETE_BOOK_ID",query = "select s from Issue s where s.book.id = : bookId"),
+        @NamedQuery(name = "NQ_SELECT_BOOK",query = "select s from Issue s where s.book.isbn = : bookIsbn and s.book.isAvailable=true")
 })
 @Table(name = "tbl_issues")
 public class Issue {
@@ -15,14 +23,22 @@ public class Issue {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long studentId;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     private Book book;
     @Temporal(TemporalType.DATE)
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern =" yyy-MM-dd")
+    @JsonbDateFormat
     private Date dateOfIssue;
     private int issuePeriod;
+    @Column(columnDefinition="default '0'")
     private int renewCount;
     @Temporal(TemporalType.DATE)
+    @JsonbDateFormat
     private Date dateOfReturn;
+
+
+    public Issue() {
+    }
 
     public long getId() {
         return id;
@@ -32,6 +48,7 @@ public class Issue {
         this.id = id;
     }
 
+    
     public long getStudentId() {
         return studentId;
     }
@@ -79,4 +96,18 @@ public class Issue {
     public void setDateOfReturn(Date dateOfReturn) {
         this.dateOfReturn = dateOfReturn;
     }
+
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "id=" + id +
+                ", studentId=" + studentId +
+                ", book=" + book +
+                ", dateOfIssue=" + dateOfIssue +
+                ", issuePeriod=" + issuePeriod +
+                ", renewCount=" + renewCount +
+                ", dateOfReturn=" + dateOfReturn +
+                '}';
+    }
 }
+

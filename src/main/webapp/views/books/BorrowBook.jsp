@@ -27,42 +27,25 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 </head>
 <body>
-<div class="container" style="text-align: center">
-    <a href="addBook"><button type="submit" class="btn btn-info">Add Book</button></a>
-    <a href="allBooks"><button type="submit" class="btn btn-info">Borrow Book</button></a>
-    <a href="allBooks"><button type="submit" class="btn btn-info">Books Available</button></a>
-    <a href="allBooks"><button type="submit" class="btn btn-info">Books Not Available</button></a>
-</div>
 
 <div class="container">
     <div class="row">
         <div class="col-8">
             <form method="post" action="books" style="margin-left: 25%">
                 <div class="form-group">
-                    <label for="bookId">Book Id</label>
-                    <input type="number" class="form-control" name="bookId" id="bookId" aria-describedby="bookId" placeholder="bookId">
-                    <small id="bookId" class="form-text text-muted">Your information is safe with us.</small>
+                    <label for="bookIsbn">Book ISBN Number</label>
+                    <input type="text" class="form-control" required name="bookIsbn" id="bookIsbn" aria-describedby="bookIsbn" placeholder="Book ISBN Number">
+                    <small id="bookIsbn" class="form-text text-muted">Your information is safe with us.</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="bookId">Student Id</label>
-                    <input type="number" class="form-control" name="studentId" id="studentId" aria-describedby="studentId" placeholder="studentId">
-                </div>
-
-
-                <div class="form-group">
-                    <label for="date">Issue Date</label>
-                    <input type="date" class="form-control" name="issueDate" id="date" placeholder="Issue Date">
+                    <label for="registrationNumber">Student Registration Number</label>
+                    <input type="text" class="form-control" required name="registrationNumber" id="registrationNumber" aria-describedby="registrationNumber" placeholder="Registration number">
                 </div>
 
                 <div class="form-group">
-                    <label for="date">Issue Period</label>
-                    <input type="number" class="form-control" name="issuePeriod" id="issuePeriod" placeholder="Issue Period">
-                </div>
-
-                <div class="form-group">
-                    <label for="date">Return Date</label>
-                    <input type="date" class="form-control" name="returnDate" id="date" placeholder="Return Date">
+                    <label for="dateOfReturn">Return Date</label>
+                    <input type="date" class="form-control" required name="dateOfReturn" id="dateOfReturn" placeholder="Return Date">
                 </div>
 
                 <button type="submit" class="btn btn-info">Submit</button>

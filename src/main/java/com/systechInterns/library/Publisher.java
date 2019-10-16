@@ -3,6 +3,11 @@ package com.systechInterns.library;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "NQ_SELECT_PUB", query = "select p from Publisher p where p.publisherName = :publisherName")
+})
+
+
 @Table(name = "tbl_publishers")
 public class Publisher {
     @Id

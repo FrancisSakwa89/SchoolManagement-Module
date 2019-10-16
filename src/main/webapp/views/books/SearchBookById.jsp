@@ -29,8 +29,8 @@
 <form style="margin-left: 25%" method="post" action="searchBook">
     <div class="form-row align-items-center">
         <div class="col-auto">
-            <label class="sr-only" for="inlineFormInput">Book Title</label>
-            <input type="text" class="form-control mb-2" id="inlineFormInput" name="bookName" placeholder="Book Title">
+            <label class="sr-only" for="inlineFormInput">Book ISBN Number</label>
+            <input type="text" class="form-control mb-2" id="inlineFormInput" required name="bookIsbn" placeholder="Book ISBN Number">
         </div>
 
         <div class="col-auto">

@@ -14,6 +14,16 @@ public class PublisherBean extends Bean<Publisher> implements PublisherI  {
     }
 
     @Override
+    public Publisher findByName(String name) {
+        return (Publisher) this
+                .entityManager
+                .createNamedQuery("NQ_SELECT_PUB")
+                .setParameter("publisherName", name)
+                .getSingleResult();
+
+    }
+
+    @Override
     public List<Publisher> readAll() throws SQLException {
         return null;
     }

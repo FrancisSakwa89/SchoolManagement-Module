@@ -40,23 +40,47 @@
         <form class="form-inline ml-auto">
             <div class="md-form my-0">
                 <a class="navbar-brand dropdown-toggle mr-4"  data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">BOOKS</a>
+                   aria-expanded="false">BOOKS PORTAL</a>
 
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="addBook">Add Book</a>
-                    <a class="dropdown-item" href="books">Borrow Book</a>
-                    <a class="dropdown-item" href="#">Available Books</a>
+                    <a class="dropdown-item" href="api/books/getAvailableBooks">Available Books</a>
+                    <a class="dropdown-item" href="api/books/getBookBorrowed">Books Not Available</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
+                    <a class="dropdown-item" href="api/books/list">All Books</a>
+
+
                 </div>
-                <a class="navbar-brand" href="author">AUTHORS</a>
-                <a class="navbar-brand" href="books">BOOKS</a>
-                <a class="navbar-brand" href="addPub">PUBLISHERS</a>
             </div>
+            <ul class="navbar-nav mr-auto">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">STUDENTLIB</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink1">
+                        <a class="dropdown-item" href="stuDetails">Lib Details</a>
+                        <a class="dropdown-item" href="books">Borrow Book</a>
+                        <a class="dropdown-item" href="returnBook">Return Book</a>
+                        <%--<a class="dropdown-item" href="#">Something else here</a>--%>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">PUBLISHERS</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink1">
+                        <a class="dropdown-item" href="addPub">Add Publisher</a>
+                        <a class="dropdown-item" href="#">View Publishers</a>
+                        <a class="dropdown-item" href="#">Delete Publishers</a>
+                    </div>
+                </li>
+
+
+            </ul>
         </form>
     </div>
     <!-- Collapsible content -->
-
 </nav>
 
 

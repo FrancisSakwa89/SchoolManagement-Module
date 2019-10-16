@@ -31,12 +31,12 @@
             <form method="post" action="addPub" style="margin-left: 25%">
                 <div class="form-group">
                     <label for="pubName">Publisher Name</label>
-                    <input type="text" class="form-control" id="pubName" name="pubName" aria-describedby="pubName" placeholder="pubName">
+                    <input type="text" class="form-control" id="pubName" required name="pubName" aria-describedby="pubName" placeholder="pubName">
                 </div>
 
                 <div class="form-group">
                     <label for="pubCity">Publisher City</label>
-                    <input type="text" class="form-control" id="pubCity" name="pubCity" aria-describedby="pubCity" placeholder="pubCity">
+                    <input type="text" class="form-control" id="pubCity" required name="pubCity" aria-describedby="pubCity" placeholder="pubCity">
                 </div>
 
 

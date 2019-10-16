@@ -1,7 +1,10 @@
 package com.systechInterns.controllers.Books;
 
+import com.google.gson.Gson;
 import com.systechInterns.Beans.BookBeanI;
-import com.systechInterns.library.Book;
+import com.systechInterns.exceptions.SearchedBookNotFoundException;
+import com.systechInterns.webservices.BookWs;
+import com.systechInterns.webservices.IssueWs;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -10,13 +13,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+
 
 @WebServlet(name = "searchBook", urlPatterns = "/searchBook")
 public class SearchBookServlet extends HttpServlet {
+
     @EJB
-    BookBeanI bookBeanI;
+    BookWs bookWs;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/views/books/SearchBookById.jsp").forward(req,resp);
@@ -25,24 +31,13 @@ public class SearchBookServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String bookName = req.getParameter("bookName");
-
+        String bookIsbn = req.getParameter("bookIsbn");
+        Map<String, String> map = new HashMap<>();
+        map.put("bookIsbn",bookIsbn);
         try {
-           List<Book> bookList = bookBeanI.findByName(bookName);
-           for (Book b: bookList){
-               if (b.getTitle().equalsIgnoreCase(bookName)){
-                   PrintWriter out = new PrintWriter(System.out);
-                   out.write("Book exists..."+ " "+bookName);
-                   System.out.println("Book exists..."+ " "+bookName);
-                   req.setAttribute("message", "Book exists..."+ " "+bookName);
-               }
-               else {
-                   System.out.println("Book with the title does not exist..."+" "+bookName);
-               }
-           }
-
-        }catch (Exception e){
-            System.out.println("Error of finding  book by Title");
+            bookWs.searchBook(new Gson().toJson(map));
+        } catch (SearchedBookNotFoundException e) {
+            e.printStackTrace();
         }
 
     }

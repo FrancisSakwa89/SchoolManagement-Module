@@ -33,24 +33,45 @@
             <form method="post" action="addBook" style="margin-left: 25%">
                 <div class="form-group">
                     <label for="bookTitle">Book Title</label>
-                    <input type="text" class="form-control" name="bookTitle" id="bookTitle" aria-describedby="bookTitle" placeholder="bookTitle">
+                    <input type="text" class="form-control" required name="bookTitle" id="bookTitle" aria-describedby="bookTitle" placeholder="bookTitle">
                 </div>
 
 
 
                 <div class="form-group">
-                    <label for="publisherId">Publisher Id</label>
-                    <input type="number" class="form-control" name="publisherId" id="publisherId" placeholder="publisher id">
+                    <label for="publisherName">Publisher Name</label>
+                    <input type="text" class="form-control" required name="publisherName" id="publisherName" placeholder="Publisher Name">
                 </div>
 
                 <div class="form-group">
-                    <label for="authorId">Author Id</label>
-                    <input type="number" class="form-control" name="authorId" id="authorId" placeholder="author id">
+                    <label for="publisherCity">Publisher City</label>
+                    <input type="text" class="form-control" required name="publisherCity" id="publisherCity" placeholder="Publisher City">
+                </div>
+
+                <div class="form-group">
+                    <label for="publisherCountry">Publisher Country</label>
+                    <input type="text" class="form-control" required name="publisherCountry" id="publisherCountry" placeholder="Publisher Country">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="authorFName">Author First Name</label>
+                    <input type="text" class="form-control" required name="authorFName" id="authorFName" placeholder="Author Fist Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="authorMName">Author Middle Name</label>
+                    <input type="text" class="form-control" required name="authorMName" id="authorMName" placeholder="Author Middle Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="authorLName">Author Last Name</label>
+                    <input type="text" class="form-control" required name="authorLName" id="authorLName" placeholder="Author Last Name">
                 </div>
 
                 <div class="form-group">
                     <label for="isbn">ISBN Number</label>
-                    <input type="text" class="form-control" name="isbn" id="isbn" placeholder="ISBN Number">
+                    <input type="text" class="form-control" required name="isbn" id="isbn" placeholder="ISBN Number">
                 </div>
 
 

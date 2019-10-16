@@ -9,6 +9,7 @@ import java.util.List;
 @Local
 public interface PublisherI extends BeanI<Publisher> {
     List<Publisher> findById(long id);
+    Publisher findByName(String name);
     List<Publisher> readAll() throws SQLException;
 
 }

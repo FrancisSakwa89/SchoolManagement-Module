@@ -2,11 +2,13 @@ package com.systechInterns.library;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @NamedQueries({
         @NamedQuery(name = "NQ_SELECT_BOOKS", query = "select m from Book m"),
+        @NamedQuery(name = "NQ_SELECT_BOOKS_BY_ISBN", query = "select m from Book m where m.isbn=:bookIsbn"),
         @NamedQuery(name = "NQ_FIND_BOOK_BY_NAME",query = "select m from Book m where m.title = :bookName"),
         @NamedQuery(name = "NQ_FIND_BOOK_STUDENT",query = "select m from Student m where m.id = :id"),
         @NamedQuery(name = "NQ_FIND_BOOK_BORROWED",query = "select m from Book m where m.isAvailable = false"),
@@ -24,8 +26,8 @@ public class Book {
     @ManyToOne(cascade = CascadeType.ALL)
     private Publisher publisher;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Author>  authors;
-    @Column(columnDefinition="tinyint(1) default 1")
+    private List<Author>  authors = new ArrayList<>();
+    @Column(nullable = false, columnDefinition = "TINYINT(1)")
     private boolean isAvailable;
 
     public Book() {
