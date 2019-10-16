@@ -6,88 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745c0d4b-91ae-451a-95f4-1ee21a70fd82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/exceptions/SearchedBookNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/PublisherBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/PublisherBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/PublisherI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/PublisherI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/config/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/config/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/BookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/BookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/AddBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/AddBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Issue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/body.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/body.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/author/author.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/author/author.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/SearchBookById.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/SearchBookById.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/book.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/listAllBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/listAllBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/publishers/addPublisher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/publishers/addPublisher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBeanI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBeanI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/PublisherBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/PublisherBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/PublisherI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/PublisherI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/config/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/config/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/BookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/BookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/AddBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Issue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Issue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Publisher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/BookWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/BookWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/IssueWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/IssueWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/includes/body.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/includes/body.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/includes/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/author/author.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/author/author.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/AddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/AddBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/BorrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/BorrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/SearchBookById.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/SearchBookById.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/book.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/listAllBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/listAllBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/publishers/addPublisher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/publishers/addPublisher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBeanI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBeanI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/PublisherBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/PublisherBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/PublisherI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/PublisherI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/config/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/config/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/BookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/BookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/AddBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Issue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Issue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Publisher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/BookWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/BookWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/IssueWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/IssueWs.class" afterDir="false" />
-    </list>
+    <list default="true" id="745c0d4b-91ae-451a-95f4-1ee21a70fd82" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,6 +74,7 @@
         <counts>
           <entry key="Student" value="1" />
           <entry key="class" value="3" />
+          <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
           <entry key="java" value="425" />
           <entry key="jsp" value="123" />
@@ -176,7 +96,7 @@
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="425" />
           <entry key="JSP" value="123" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="3" />
           <entry key="XML" value="22" />
         </counts>
@@ -267,11 +187,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="242" column="69" selection-start-line="242" selection-start-column="69" selection-end-line="242" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -327,7 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Name.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/PublisherWs.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/config/EntPoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Return.java" />
@@ -378,6 +306,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/.gitignore" />
       </list>
     </option>
   </component>
@@ -418,122 +347,6 @@
               <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="Beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Books" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="webservices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="books" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="issues" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -547,7 +360,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571150177095" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571210411467" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -680,18 +493,17 @@
       <workItem from="1571053624214" duration="2942000" />
       <workItem from="1571112177402" duration="36556000" />
       <workItem from="1571155596543" duration="2567000" />
-      <workItem from="1571198504330" duration="10987000" />
+      <workItem from="1571198504330" duration="11294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226876000" />
+    <option name="totallyTimeSpent" value="227183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="147" y="27" width="1216" height="741" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49642858" visible="true" weight="0.20769231" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49642858" visible="true" weight="0.20769231" />
       <window_info id="Structure" order="1" sideWeight="0.50357145" side_tool="true" weight="0.26501766" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -702,13 +514,13 @@
       <window_info id="Persistence" order="8" sideWeight="0.50357145" side_tool="true" weight="0.26501766" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.46481177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.46481177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32733223" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.6247961" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.62356794" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50151515" side_tool="true" weight="0.5725938" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.48772505" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -786,13 +598,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_courses">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1172,6 +977,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="242" column="69" selection-start-line="242" selection-start-column="69" selection-end-line="242" selection-end-column="69" />
         </state>
       </provider>
     </entry>
