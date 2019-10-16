@@ -5,7 +5,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.systechInterns.Beans.BookBeanI;
 import com.systechInterns.Beans.IssueI;
-import com.systechInterns.config.Util;
+import com.systechInterns.cdi.events.IssueQualifier;
+import com.systechInterns.cdi.events.Sms;
+import com.systechInterns.util.Util;
 import com.systechInterns.library.Book;
 import com.systechInterns.library.Issue;
 import com.systechInterns.studentmodule.Student;
@@ -13,6 +15,8 @@ import com.systechInterns.studentmodule.Student;
 import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -32,6 +36,16 @@ public class IssueWs {
     @EJB
     BookBeanI bookBeanI;
 
+
+    @Inject
+    @IssueQualifier.issue
+    Event<Issue> issueEvent;
+
+    @Inject
+    @IssueQualifier.receive
+    Event<Issue> returnBook;
+
+    private Sms sms = new Sms();
 
     @POST
     @Path("/add")
@@ -67,8 +81,12 @@ public class IssueWs {
                     issue.setRenewCount(0);
                     issue.setStudentId(studentId);
                     book.setAvailable(false);
+                    issueEvent.fire(issue);
+                    sms.setStatus("Book successfully issued to"+ student);
+                    System.out.println(sms.getStatus());
 
-                    System.out.println("added issue to "+student);
+                    System.out.println("added issue to "+issue);
+                    System.out.println(sms);
                     return Response.ok().entity(new Gson().toJson(issueI.add(issue))).build();
 
                 }
@@ -157,6 +175,7 @@ public class IssueWs {
         if (student != null) {
             long studentId = student.getId();
             System.out.println(student);
+
             return Response.ok().entity( new Gson().toJson(issueI.findIssuesForStudent(studentId))).build();
 
         }
@@ -189,13 +208,18 @@ public class IssueWs {
         System.out.println(json);
         JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
         String registrationNumber = jsonObject.get("registrationNumber").getAsString();
+        String bookIsbn = jsonObject.get("bookIsbn").getAsString();
         String studentjson= new Util().findStudentByRegNo(registrationNumber);
         System.out.println(studentjson);
         Student student = new Gson().fromJson(studentjson, Student.class);
         if (student != null) {
             long studentId = student.getId();
-            System.out.println(student);
-            return Response.ok().entity( new Gson().toJson(issueI.deleteIssuesForStudent(studentId))).build();
+
+            Issue issue = (Issue) issueI.deleteIssuesForStudent(studentId, bookIsbn);
+            sms.setStatus("Student issued with the book deleted..."+ student);
+            returnBook.fire(issue);
+            System.out.println(sms.getStatus());
+            return Response.ok().entity( new Gson().toJson(issue)).build();
 
         }
 

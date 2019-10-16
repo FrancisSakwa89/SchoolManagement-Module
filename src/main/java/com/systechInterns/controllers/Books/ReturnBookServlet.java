@@ -3,12 +3,9 @@ package com.systechInterns.controllers.Books;
 import com.google.gson.Gson;
 import com.systechInterns.Beans.BookBeanI;
 import com.systechInterns.Beans.IssueI;
-import com.systechInterns.config.Util;
 import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
 
-import com.systechInterns.library.Issue;
-import com.systechInterns.studentmodule.Student;
 import com.systechInterns.webservices.IssueWs;
 
 import javax.ejb.EJB;
@@ -17,11 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 

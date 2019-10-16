@@ -1,6 +1,8 @@
 package com.systechInterns.library;
 
 
+import javax.annotation.PostConstruct;
+import javax.enterprise.event.Observes;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +19,14 @@ import java.util.List;
 
 @Table(name = "tbl_books")
 public class Book {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "ISBN")
+    @Column(name = "ISBN", unique = true)
     private String isbn;
+    @Column(unique = true)
     private String title;
     @ManyToOne(cascade = CascadeType.ALL)
     private Publisher publisher;

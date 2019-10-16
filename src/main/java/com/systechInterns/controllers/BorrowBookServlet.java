@@ -1,12 +1,7 @@
 package com.systechInterns.controllers;
 
 import com.google.gson.Gson;
-import com.systechInterns.Beans.AuthorI;
-import com.systechInterns.Beans.BookBeanI;
-import com.systechInterns.Beans.IssueI;
-import com.systechInterns.library.Book;
-import com.systechInterns.library.Issue;
-import com.systechInterns.studentmodule.Student;
+
 import com.systechInterns.webservices.IssueWs;
 
 import javax.ejb.EJB;
@@ -16,21 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name = "books", urlPatterns = "/books")
-public class BookServlet extends HttpServlet {
-    @EJB
-    BookBeanI bookBeanI;
-    @EJB
-    IssueI issueI;
+public class BorrowBookServlet extends HttpServlet {
 
     @EJB
     IssueWs issueWs;
+
 
 
     @Override
@@ -48,8 +37,6 @@ public class BookServlet extends HttpServlet {
 
         String returnDate = req.getParameter("dateOfReturn");
         System.out.println(returnDate);
-
-
 
 
         map.put("registrationNumber", studentRegNo);

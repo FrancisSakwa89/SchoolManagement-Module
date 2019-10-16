@@ -1,8 +1,6 @@
 package com.systechInterns.library;
 
 
-import com.systechInterns.studentmodule.Student;
-
 import javax.json.bind.annotation.JsonbDateFormat;
 import javax.persistence.*;
 import java.util.Date;
@@ -11,7 +9,7 @@ import java.util.Date;
 @NamedQueries({
         @NamedQuery(name = "NQ_FIND_ALL_ISSUES",query = "select s from Issue s"),
         @NamedQuery(name = "NQ_SELECT_STUDENT_ISSUES",query = "select s from Issue s where s.studentId = : studentId"),
-        @NamedQuery(name = "NQ_DELETE_STUDENT_ISSUES",query = "select s from Issue s where s.studentId = : studentId"),
+        @NamedQuery(name = "NQ_DELETE_STUDENT_ISSUES",query = "select s from Issue s where s.studentId = : studentId and s.book.isbn=:bookIsbn"),
         @NamedQuery(name = "NQ_GET_STUDENT_ID",query = "select s from Issue s where s.studentId = : studentId"),
         @NamedQuery(name = "NQ_GET_AND_ISBN",query = "select s from Issue s where s.studentId = : studentId and s.book.isbn=:bookIsbn"),
         @NamedQuery(name = "NQ_DELETE_BOOK_ID",query = "select s from Issue s where s.book.id = : bookId"),
@@ -36,7 +34,6 @@ public class Issue {
     @JsonbDateFormat
     private Date dateOfReturn;
 
-
     public Issue() {
     }
 
@@ -48,7 +45,8 @@ public class Issue {
         this.id = id;
     }
 
-    
+
+
     public long getStudentId() {
         return studentId;
     }

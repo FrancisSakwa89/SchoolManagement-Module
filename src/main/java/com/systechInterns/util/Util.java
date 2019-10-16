@@ -1,4 +1,4 @@
-package com.systechInterns.config;
+package com.systechInterns.util;
 
 
 import com.google.gson.Gson;
@@ -33,21 +33,4 @@ public class Util {
 
     }
 
-//    public String getStudentById(long id){
-//
-//        try {
-//            OkHttpClient client = new OkHttpClient();
-//            RequestBody requestBody = RequestBody.create(id);
-//            Request request = new Request.Builder()
-//                    .url(url)
-//                    .post(requestBody).build();
-//
-//            Response response = client.newCall(request).execute();
-//            return  response.body().toString();
-//        }catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return null;
-//    }
 }

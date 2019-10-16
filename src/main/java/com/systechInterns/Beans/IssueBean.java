@@ -52,19 +52,6 @@ public class IssueBean extends Bean<Issue> implements IssueI {
         return null;
     }
 
-    @Override
-    public List<Issue> deleteBookId(long id) {
-        List<Issue> issueList = this
-                .entityManager
-                .createNamedQuery("NQ_DELETE_BOOK_ID")
-                .setParameter("bookId", id)
-                .getResultList();
-        for (Issue issue : issueList) {
-            entityManager.remove(issue);
-            System.out.println("removed student from the list.." + issue);
-        }
-        return issueList;
-    }
 
     @Override
     public List<Issue> findIssuesForStudent(long studentId) {
@@ -80,14 +67,19 @@ public class IssueBean extends Bean<Issue> implements IssueI {
     }
 
     @Override
-    public List<Issue> deleteIssuesForStudent(long studentId) {
+    public List<Issue> deleteIssuesForStudent(long studentId, String bookIsbn) {
         List<Issue> issueList = this
                 .entityManager
                 .createNamedQuery("NQ_DELETE_STUDENT_ISSUES")
                 .setParameter("studentId", studentId)
+                .setParameter("bookIsbn", bookIsbn)
                 .getResultList();
         for (Issue issue : issueList) {
+
             entityManager.remove(issue);
+            Book book = bookBeanI.getIsbn(bookIsbn);
+            book.setAvailable(true);
+            bookBeanI.update(book);
             System.out.println("removed student from the list.." + issue);
         }
         return issueList;
@@ -104,7 +96,6 @@ public class IssueBean extends Bean<Issue> implements IssueI {
 
     @Override
     public List<Issue> calculateFine(long StudentId, Date dateOfReturn, Date dateRequiredToReturn,String bookIsbn) {
-        try {
             Double amount = 10.0;
             List<Issue> issueList = this
                     .entityManager
@@ -112,8 +103,12 @@ public class IssueBean extends Bean<Issue> implements IssueI {
                     .setParameter("studentId", StudentId)
                     .setParameter("bookIsbn", bookIsbn)
                     .getResultList();
+        try {
             issueI.findIssuesForStudent(bookBeanI.searchBookByIsbn(bookIsbn).getId());
-            dateOfReturn = new Date();
+        } catch (SearchedBookNotFoundException e) {
+            e.printStackTrace();
+        }
+        dateOfReturn = new Date();
             for (Issue issue : issueList){
                 dateRequiredToReturn = issue.getDateOfReturn();
                 if (dateOfReturn.getDay() - dateRequiredToReturn.getDay() > 0) {
@@ -122,49 +117,11 @@ public class IssueBean extends Bean<Issue> implements IssueI {
                     System.out.println("Your fine is: "+ totalFine);
                 }
             }
-        } catch (SearchedBookNotFoundException e) {
-            e.printStackTrace();
-        }
 
-
-
-
-        return null;
+            return issueList;
     }
+//    return bookList.size()>0?bookList.get(0):null;
 
-    @Override
-    public void returnBook(String regNo) {
-
-    }
-
-
-    @Override
-    public List addStudentId(long id) {
-        return null;
-    }
-
-    @Override
-    public Book verifyBook(String bookIsbn) {
-        List<Book> bookList = this
-                .entityManager
-                .createNamedQuery("NQ_SELECT_BOOK")
-                .setParameter("bookIsbn", bookIsbn)
-                .getResultList();
-        System.out.println(bookList);
-        return bookList.size()>0?bookList.get(0):null;
-
-
-    }
-
-
-    @Override
-    public List getStudentId(String registrationNumber) {
-        return this
-                .entityManager
-                .createNamedQuery("NQ_GET_STUDENT_ID")
-                .setParameter("studentId", registrationNumber)
-                .getResultList();
-    }
 
 
     }
