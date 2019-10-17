@@ -11,6 +11,7 @@ import com.systechInterns.util.Util;
 import com.systechInterns.library.Book;
 import com.systechInterns.library.Issue;
 import com.systechInterns.studentmodule.Student;
+import org.jboss.logging.Logger;
 
 import javax.ejb.EJB;
 import javax.ejb.Local;
@@ -45,6 +46,11 @@ public class IssueWs {
     @IssueQualifier.receive
     Event<Issue> returnBook;
 
+    @Inject
+    private transient Logger logger;
+
+
+    private CustomResponse customResponse = new CustomResponse();
     private Sms sms = new Sms();
 
     @POST
@@ -99,7 +105,10 @@ public class IssueWs {
                 e.printStackTrace();
             }
 
-        return null;
+            customResponse.setMessage("Was not able to issue book to the provided student number..");
+            customResponse.setStatus(false);
+            logger.error("Error occurred while issuing book ");
+        return Response.ok().entity(customResponse).build();
     }
 
 
@@ -113,7 +122,8 @@ public class IssueWs {
             System.out.println("Error getting issues list..");
             e.printStackTrace();
         }
-        return null;
+        customResponse.setMessage("No list found for the query of finding all books..");
+        return Response.ok().entity(customResponse).build();
     }
 
 
@@ -181,7 +191,9 @@ public class IssueWs {
         }
 
 
-        return null;
+        customResponse.setMessage("Student with the provided registration number does not exist...");
+        logger.error("Student does not exist .."+studentjson);
+        return Response.ok().entity(customResponse).build();
 
     }
 
@@ -218,12 +230,18 @@ public class IssueWs {
             Issue issue = (Issue) issueI.deleteIssuesForStudent(studentId, bookIsbn);
             sms.setStatus("Student issued with the book deleted..."+ student);
             returnBook.fire(issue);
+            customResponse.setData(new Gson().toJson(issue));
+            customResponse.setMessage("Issue for student successifully");
+            customResponse.setStatus(true);
             System.out.println(sms.getStatus());
-            return Response.ok().entity( new Gson().toJson(issue)).build();
+            return Response.ok().entity(customResponse).build();
 
         }
 
-        return null;
+        customResponse.setMessage("Did not find issues to delete for student..");
+        customResponse.setStatus(false);
+        logger.error("Got an error deleting student issue");
+        return Response.ok().entity(customResponse).build();
 
     }
 

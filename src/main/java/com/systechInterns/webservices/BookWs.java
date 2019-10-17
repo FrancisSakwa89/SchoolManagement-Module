@@ -7,6 +7,7 @@ import com.google.gson.JsonParser;
 import com.systechInterns.Beans.BookBeanI;
 import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
+import org.jboss.logging.Logger;
 
 import javax.ejb.EJB;
 import javax.ejb.Local;
@@ -16,7 +17,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 @Stateless
 @Local
@@ -28,6 +28,8 @@ public class BookWs {
     @EJB
     BookBeanI bookBeanI;
 
+    @Inject
+    private transient Logger logger;
 
     @POST
     @Path("/add")
@@ -43,6 +45,7 @@ public class BookWs {
             System.out.println("got an error adding book");
             e.printStackTrace();
         }
+        logger.info("Message: "+customResponse.getMessage()+" data"+customResponse.getData()+ " status: "+customResponse.isStatus());
         return Response.ok().entity(customResponse).build();
 
     }
@@ -56,6 +59,7 @@ public class BookWs {
         customResponse.setMessage("All books in the library");
         customResponse.setStatus(true);
 
+        logger.info("Message: "+customResponse.getMessage()+" data"+customResponse.getData()+customResponse.isStatus());
         return Response.ok().entity(customResponse).build();
     }
 
