@@ -25,6 +25,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 
 @Stateless
@@ -33,7 +34,7 @@ import java.util.Date;
 public class IssueWs {
     @EJB
     IssueI issueI;
-    
+
     @EJB
     BookBeanI bookBeanI;
 
@@ -67,47 +68,46 @@ public class IssueWs {
                 Date dateOfIssue = new Date();
                 String returnDate = jsonObject.get("dateOfReturn").getAsString();
                 System.out.println(returnDate);
-                Date dt= null;
-                try {
-                    dt = new SimpleDateFormat("yyyy-mm-dd").parse(returnDate);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+                SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+                Date date1 = myFormat.parse(String.valueOf(dateOfIssue));
+                Date date2 = myFormat.parse(returnDate);
 
+                long diff = date2.getTime() - date1.getTime();
+                int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+
+                System.out.println("Issue period is: "+ issuePeriod);
                 if (student != null) {
 
-                    int issuePeriod = dt.getDay() - dateOfIssue.getDay();
                     long studentId = student.getId();
                     System.out.println(student);
                     Issue issue = new Issue();
                     issue.setBook(book);
                     issue.setDateOfIssue(dateOfIssue);
-                    issue.setDateOfReturn(dt);
+                    issue.setDateOfReturn(date2);
                     issue.setIssuePeriod(issuePeriod);
                     issue.setRenewCount(0);
                     issue.setStudentId(studentId);
                     book.setAvailable(false);
                     issueEvent.fire(issue);
-                    sms.setStatus("Book successfully issued to"+ student);
+                    sms.setStatus("Book successfully issued to" + student);
                     System.out.println(sms.getStatus());
 
-                    System.out.println("added issue to "+issue);
+                    System.out.println("added issue to " + issue);
                     System.out.println(sms);
                     return Response.ok().entity(new Gson().toJson(issueI.add(issue))).build();
 
                 }
-            }
-            else {
+            } else {
                 System.out.println("Not added issue record...");
             }
-            } catch(Exception e){
-                System.out.println("got an error..");
-                e.printStackTrace();
-            }
+        } catch (Exception e) {
+            System.out.println("got an error..");
+            e.printStackTrace();
+        }
 
-            customResponse.setMessage("Was not able to issue book to the provided student number..");
-            customResponse.setStatus(false);
-            logger.error("Error occurred while issuing book ");
+        customResponse.setMessage("Was not able to issue book to the provided student number..");
+        customResponse.setStatus(false);
+        logger.error("Error occurred while issuing book ");
         return Response.ok().entity(customResponse).build();
     }
 
@@ -179,20 +179,20 @@ public class IssueWs {
         System.out.println(json);
         JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
         String registrationNumber = jsonObject.get("registrationNumber").getAsString();
-        String studentjson= new Util().findStudentByRegNo(registrationNumber);
+        String studentjson = new Util().findStudentByRegNo(registrationNumber);
         System.out.println(studentjson);
         Student student = new Gson().fromJson(studentjson, Student.class);
         if (student != null) {
             long studentId = student.getId();
             System.out.println(student);
 
-            return Response.ok().entity( new Gson().toJson(issueI.findIssuesForStudent(studentId))).build();
+            return Response.ok().entity(new Gson().toJson(issueI.findIssuesForStudent(studentId))).build();
 
         }
 
 
         customResponse.setMessage("Student with the provided registration number does not exist...");
-        logger.error("Student does not exist .."+studentjson);
+        logger.error("Student does not exist .." + studentjson);
         return Response.ok().entity(customResponse).build();
 
     }
@@ -206,9 +206,9 @@ public class IssueWs {
         JsonObject jsonObject = jp.parse(json).getAsJsonObject();
         String registrationNumber = jsonObject.get("registrationNumber").getAsString();
         Student student = new Gson().fromJson(new Util().findStudentByRegNo(registrationNumber), Student.class);
-        if (student != null){
+        if (student != null) {
             long studentId = student.getId();
-            System.out.println(" Student id is: "+studentId);
+            System.out.println(" Student id is: " + studentId);
         }
         return student.getId();
     }
@@ -221,14 +221,14 @@ public class IssueWs {
         JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
         String registrationNumber = jsonObject.get("registrationNumber").getAsString();
         String bookIsbn = jsonObject.get("bookIsbn").getAsString();
-        String studentjson= new Util().findStudentByRegNo(registrationNumber);
+        String studentjson = new Util().findStudentByRegNo(registrationNumber);
         System.out.println(studentjson);
         Student student = new Gson().fromJson(studentjson, Student.class);
         if (student != null) {
             long studentId = student.getId();
 
             Issue issue = (Issue) issueI.deleteIssuesForStudent(studentId, bookIsbn);
-            sms.setStatus("Student issued with the book deleted..."+ student);
+            sms.setStatus("Student issued with the book deleted..." + student);
             returnBook.fire(issue);
             customResponse.setData(new Gson().toJson(issue));
             customResponse.setMessage("Issue for student successifully");
@@ -245,7 +245,34 @@ public class IssueWs {
 
     }
 
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/sid")
+    public Response getRegNo(String json) {
+        System.out.println(json);
+        JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
+        String studentId = jsonObject.get("id").getAsString();
+        String studentjson = new Util().findStudentByRegNo(studentId);
+        System.out.println(studentjson);
+        Student student = new Gson().fromJson(studentjson, Student.class);
+        if (student != null) {
+
+            System.out.println(student);
+
+            return Response.ok().entity(new Gson().toJson(studentId)).build();
+
+        }
+
+
+        customResponse.setMessage("Student with the provided id is:" + student);
+        logger.info("Student with the provided id is:" + student);
+        return Response.ok().entity(customResponse).build();
+
+    }
 }
+
+
 
 
 

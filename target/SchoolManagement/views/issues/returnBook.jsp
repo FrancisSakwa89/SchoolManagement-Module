@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="/includes/body.jsp"%>
+<%@include file="/includes/navbar.jsp"%>
 <html>
 <title>Title</title>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -25,6 +25,8 @@
 </head>
 <body>
 <%--<p style='color:red;'>${message}</p>--%>
+<br><br><br><br>
+
 <div class="container">
     <div class="row">
         <div class="col-8">

@@ -7,6 +7,7 @@ import com.systechInterns.cdi.events.Sms;
 import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
 import com.systechInterns.library.Issue;
+import com.systechInterns.library.Return;
 import com.systechInterns.webservices.IssueWs;
 import org.jboss.logging.Logger;
 
@@ -29,6 +30,9 @@ public class BookBean extends Bean<Book> implements BookBeanI {
 
     @EJB
     IssueI issueI;
+
+    @EJB
+    RetunBeanI retunBeanI;
 
     @Inject
     @IssueQualifier.receive
@@ -141,6 +145,8 @@ public class BookBean extends Bean<Book> implements BookBeanI {
                 issueI.calculateFine(studentId,dateOfReturn,dateRequiredToBeReturned,bookIsbn);
                 sms.setStatus("You have a fine to pay due to late returning of the book...Kindly clear with the finance manager..");
                 returnBookEvent.fire(issue);
+                Return rt = new Return();
+                retunBeanI.add(rt);
                 System.out.println(issue);
 
             }

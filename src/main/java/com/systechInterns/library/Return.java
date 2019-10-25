@@ -6,8 +6,9 @@ import javax.persistence.*;
 @Entity
 
 @NamedQueries({
-        @NamedQuery(name = "NQ_SELECT_BOOKS_RETURNED", query = "select r from Return r where r.studentId = :id"),
-        @NamedQuery(name = "NQ_RETURN_BOOK_BORROWED",query = "select m from Book m where m.isAvailable = false")
+//        @NamedQuery(name = "NQ_SELECT_BOOKS_RETURNED", query = "select r from Return r where r.studentId = :id"),
+        @NamedQuery(name = "NQ_SELECT_BOOKS_RETURNED", query = "select r from Return r"),
+
 })
 
 @Table(name = "tbl_bookreturns")

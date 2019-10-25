@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="/includes/navbar.jsp"%>
 <html>
 <head>
     <title>Title</title>
@@ -27,60 +28,59 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
 </head>
+<br><br>
+<br><br>
+<br>
 <body>
-    <script type="text/javascript" language="javascript">
-        $(document).ready(function () {
-            var res = [];
-            $.ajax({
-                type: "GET",
-                datatype:"jsonp",
-                contentType: "application/json;charset=utf-8",
-                processData: true,
-                url: "http://localhost:8080/SchoolManagement/api/books/getAvailableBooks",
-                success: function (data) {
-                    res.push(data);
-                    array(res);
+<br><br><br><br>
+
+<div class="container">
+    <div class="table-responsive">
+        <h1>ALL BOOKS</h1>
+        <br />
+        <table class="table table-bordered table-striped" id="table1">
+            <tr>
+                <th>Book Title</th>
+                <th>ISBN NUMBER</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Status</th>
+
+
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8081/SchoolManagement/api/books/list",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    console.log(data);
+                    var len = data.length;
+                    var txt = "";
+                    if (len > 0) {
+                        for (var i = 0; i < len; i++) {
+                            if (data[i].bookId != null && data[i].isAvailable != null) {
+                                txt += "<tr><td>" + data[i].bookTitle + "</td><td>" + data[i].ISBN + "</td></tr>";
+                            }
+                        }
+                        if (txt != "") {
+                            $("#table1").append(txt).removeClass("hidden");
+                        }
+                    }
                 }
-            });
-            function array(arr) {
-                console.log(arr);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert('error: ' + textStatus + ': ' + errorThrown);
             }
         });
 
-        let xhr = new XMLHttpRequest;
-        xhr.open('GET', 'your-url', true);
-        xhr.onload = function()
-        {
-            if (this.status === 200)
-            {
-                let data = JSON.parse(this.responseText).Table,
-                    tbodyHtml = '';
-
-                data.map(function(d) {
-                    tbodyHtml =+ `
-      	<tr>
-        	<td>${d.ParentCategoryId}</td>
-        	<td>${d.ParentCategoryName}</td>
-        	<td>${d.IsActive}</td>
-        </tr>
-      `;
-                });
-
-                document.querySelector('#dataTable tbody').innerHTML = tbodyHtml;
-            }
-        }
-        xhr.send();
 
 
 </script>
-
-    <table id="dataTable">
-        <tbody>
-
-        </tbody>
-    </table>
-
-
-
 </body>
 </html>

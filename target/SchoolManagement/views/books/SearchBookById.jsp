@@ -26,6 +26,8 @@
 <body>
 <%--<p style='color:red;'>${message}</p>--%>
 
+<br><br>
+
 <form style="margin-left: 25%" method="post" action="searchBook">
     <div class="form-row align-items-center">
         <div class="col-auto">

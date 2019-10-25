@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="/includes/navbar.jsp"%>
+
 <html>
 <head>
     <title>Title</title>
@@ -26,6 +28,7 @@
 <body>
 <%--<p style='color:red;'>${message}</p>--%>
 
+<br><br><br><br>
 <form style="margin-left: 25%" method="post" action="api/issues/getBookByTitle">
     <div class="form-row align-items-center">
         <div class="col-auto">

@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="/includes/body.jsp"%>
+<%@include file="/includes/navbar.jsp"%>
 <html>
 <head>
     <title>Sales</title>
@@ -24,209 +24,142 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+
+
 </head>
-<body>
-<br><br>
-<%--<table class="table table-bordered" style="margin-left: 15%;width:70%">--%>
-    <%--<thead>--%>
-    <%--<tr>--%>
-        <%--<th scope="col">Book Id</th>--%>
-        <%--<th scope="col">Availability</th>--%>
-        <%--<th scope="col">ISBN no.</th>--%>
-        <%--<th scope="col">Publisher Id</th>--%>
-        <%--&lt;%&ndash;<th scope="col"></th>&ndash;%&gt;--%>
-        <%--<th scope="col">Title</th>--%>
 
-<div class="container-fluid section">
-    <h3 class="text-center main-title">
-        <i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;AVAILABLE BOOKS (GRID)
-    </h3>
+<br><br><br><br><br>
 
-    <form class="form-inline" role="form" id="contribution-form" action="books">
-        <div class="col-md-4">
-            <label for="dateFrom" class="control-label">
-                Date From:
-            </label> <input type="text" readonly="readonly" name="dateFrom"
-                            class="form-control datepicker" id="dateFrom"
-                            placeholder="Date From">
-        </div>
-        <div class="col-md-4">
-            <label for="dateTo" class="control-label">
-                Date To:
-            </label> <input type="text" readonly="readonly" name="dateTo"
-                            class="form-control datepicker" id="dateTo"
-                            placeholder="Date To">
-        </div>
-        <div class="col-md-4">
-            <label for="unitNumber" class="control-label">Unit Number:</label>
-            <input
-                    type="text" name="unitNumber" class="form-control"
-                    id="unitNumber"
-                    placeholder="Unit Number">
-        </div>
-        <div class="col-md-4">
-            <label class="control-label"></label><br/>
-            <button class="btn btn-primary">
-                SHOW HISTORY
-            </button>
-        </div>
-    </form>
-</div>
+<%--<div class="container">--%>
+    <%--<div class="table-responsive">--%>
+        <%--<h1>ALL BOOKS</h1>--%>
+        <%--<br />--%>
+        <%--<table class="table table-striped">--%>
+            <%--<thead>--%>
+            <%--<tr>--%>
+                <%--<th>Book Title</th>--%>
+                <%--<th>ISBN NUMBER</th>--%>
+                <%--<th>Author</th>--%>
+                <%--<th>Publisher</th>--%>
+                <%--<th>Status</th>--%>
+            <%--</tr>--%>
+            <%--</thead>--%>
 
-<div class="modal fade" id="modal-view-contribution" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabelViewContributions" aria-hidden="true">
-    <form role="form" id="form-view-contributions">
-        <div class="modal-dialog large-modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" id="myModalLabelViewContributions">
-                        <i class="glyphicon glyphicon-picture"></i>&nbsp;&nbsp;AVAILABLE BOOKS
-                    </h4>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-responsive table-striped table-bordered" id="select-results">
-                    </table>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
+            <%--<tbody>--%>
+            <%--<c:forEach items="${books}" var="pp">--%>
+                <%--<tr>--%>
+                    <%--<td><${pp.id}</td>--%>
+                    <%--<td><${pp.title}</td>--%>
+                    <%--<td><${pp.ISBN}</td>--%>
+                    <%--<td><${pp.color}</td>--%>
+                    <%--<td><${pp.datetime}</td>--%>
+                <%--</tr>--%>
+            <%--</c:forEach>--%>
+            <%--</tbody>--%>
 
-<script type="text/javascript">
+        <%--</table>--%>
+    <%--</div>--%>
+<%--</div>--%>
 
-    function format_no(yourNumber) {
-        if (typeof    yourNumber != 'undefined') {
-            //Seperates the components of the number
-            var n = yourNumber.toString().split(".");
-            //Comma-fies the first part
-            n[0] = n[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            //Combines the two sections
-            return n.join(".");
-        }
-        return yourNumber;
+
+<%--<style>--%>
+    <%--body{--%>
+        <%--font-size: 1.2em;--%>
+    <%--}--%>
+<%--</style>--%>
+<%--</body>--%>
+
+<style>
+    button{
+        border-radius: 10px;
+        height: 45px;
+        width: 150px;
+        text-align: center;
+        background-color: #5499C7;
+        font-size: 15px;
+        color: #ffffff;
     }
-
-    $(document).ready(function () {
-
-        $('.datepicker').datetimepicker(
-            $('#dateFrom').datetimepicker({
-                format: 'mm-dd-yyyy',
-                startView: 'month',
-                minView: 'month',
-                autoclose: true
-            })
-                .on('changeDate', function (e) {
-                    $(this).datetimepicker('hide');
-                    // Revalidate the date field
-                    $('#contribution-form').bootstrapValidator('revalidateField', 'dateTo');
-                }),
-            $('#dateTo')
-                .datetimepicker({
-                    format: 'mm-dd-yyyy',
-                    startView: 'month',
-                    minView: 'month',
-                    autoclose: true
-                })
-                .on('changeDate', function (e) {
-                    $(this).datetimepicker('hide');
-                    // Revalidate the date field
-                    $('#contribution-form').bootstrapValidator('revalidateField', 'dateTo');
-                }));
-
-
-        $('#contribution-form').bootstrapValidator({
-            message: 'This value is not valid',
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                dateFrom: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please select the start date'
-                        }
-                    }
-                },
-                dateTo: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please select the ending date'
-                        }
-                    }
-                }
+    input{
+        height: 35px;
+        font-size: 15px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        text-align: center;
+        padding: 15px;
+        font-size: 20px;
+    }
+    th {
+        background-color: #5499C7;
+        color: white;
+        font-style: bold;
+        font-size: 35px;
+    }
+</style>
+<script >
+    //JSON Object................
+    var json_obj  = {
+        type: "GET",
+        url: "http://localhost:8081/SchoolManagement/api/books/list",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (data) {
+            if (data) {
+                console.log(data);
+                var len = data.length;
             }
-        })
-            .on('success.form.bv', function (e) {
+        }};
+            //JSON Object End................
+            //Create table and fetch data from JSON Object.
+            $(document).ready(function () {
+                $("button").click(function (data) {
+                    var number_of_rows = json_obj.length;
+                    var k = 0;
+                    var table_body = '<table border="1" id="example"><thead><tr><th>Book Title</th><th>ISBN</th><th>AUTHOR</th><th>PUBLISHER</th></tr></thead><tbody>';
+                    for (j in json_obj.books) {
+                        for (i = 0; i < json_obj.books.length; i++) {
+                            table_body += '<tr>';
+                            table_body += '<td>';
+                            table_body += json_obj.books[k].title["title"];
+                            table_body += '</td>';
 
-                start_wait();
+                            table_body += '<td>';
+                            table_body += json_obj.books[k].isbn[i];
+                            table_body += '</td>';
 
-                $.ajax({
-                    url: $('#base_url').val() + 'member',
-                    type: 'post',
-                    data:
-                        {
-                            ACTION: 'CH_GRID',
-                            dateFrom: $('#dateFrom').val(),
-                            dateTo: $('#dateTo').val()
-                        },
-                    dataType: 'json',
-                    success: function (json) {
-                        console.log(json);
-                        html = "<tr><th>DATE</th><th>MONTH</th><th>YEAR</th><th>EE</th><th>ER</th><th>AVC</th><th>AVCER</th><th>SALARY</th><th>TYPE</th><th>TOTAL</th><th>REGISTERED/<br>UNREGISTERED</th></tr>";
-                        var eeSum = 0;
-                        var erSum = 0;
-                        var avcSum = 0;
-                        var avcErSum = 0;
-                        var salSum = 0;
-                        var totalSum = 0;
-                        if (json.success) {
-
-                            json = $.parseJSON(json.data);
-                            console.log(json);
-                            $.each(json, function (key, value) {
-                                if (key == 'rows') {
-                                    for (var i = 0; i < json.rows.length; i++) {
-                                        var row = json.rows[i];
-                                        html = html + "<tr><td>" + row['datePaid'] + "</td><td>" + row['month'] + "</td><td>" + row['year'] + "</td><td>" + format_no(row['ee']) + "</td><td>" + format_no(row['er']) +
-                                            "</td><td>" + format_no(row['avc']) + "</td><td>" + format_no(row['avcer']) + "</td><td>" + format_no(row['salary']) + "</td><td>" + row['type'] +
-                                            "</td><td>" + format_no(row['total']) + "</td><td>" + row['status'] + "</td></tr>";
-
-                                        eeSum += row['ee'];
-                                        erSum += row['er'];
-                                        salSum += row['salary'];
-                                        totalSum += row['total'];
-                                        avcSum += row['avc'];
-                                        avcErSum += row['avcer'];
-
-                                    }
-                                    empty = "<tr><th></th><th></th><th></th><th>TOTAL EE</th><th>TOTAL ER</th><th>TOTAL AVC</th><th>TOTAL AVCER</th><th>TOTAL SALARY</th><th></th><th>GRAND TOTAL</th><th></th></tr>";
-                                    totals = "<tr><td></td><td></td><td></td><td>" + format_no(precisionRound(eeSum, 1)) + "</td><td>" + format_no(precisionRound(erSum, 1)) + "</td><td>" + format_no(avcSum) + "</td><td>" + format_no(avcErSum) + "</td><td>" + format_no(salSum) +
-                                        "</td><td></td><td>" + format_no(precisionRound(totalSum, 1)) + "</td><td></td></tr>";
-                                    console.log("EE SUM IS: " + format_no(precisionRound(eeSum, 1)));
-                                    html = html + empty + totals;
-                                    stop_wait();
-                                }
-                            });
+                            table_body += '</tr>';
                         }
-                        $('#select-results').html(html);
-                        stop_wait();
-                        $('#modal-view-contribution').modal('show');
+                        k++;
                     }
+                    table_body += '</tbody></table>';
+                    $('#tableDiv').html(table_body);
+                    //display data..........
                 });
+// for search function.................................. only............................
+                $("#search").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("table tr").filter(function (index) {
+                        if (index > 0) {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        }
+                    });
+                });
+//=================End=========================End===============================
             });
-    });
-
-    function precisionRound(number, precision) {
-        var factor = Math.pow(10, precision);
-        return Math.round(number * factor) / factor;
-    }
-
-
 </script>
+<body>
+<div style="margin-top: 50px; margin-left: 250px; margin-right: 250px;">
+    <button>View Books</button>
+    <%--<input type="text" id="search" placeholder="Search data here....."></input>--%>
+    <div id="tableDiv" style="margin-top: 40px">
 
-
+    </div>
+</div>
+<p id="p1"></p>
 </body>
+
 </html>
+

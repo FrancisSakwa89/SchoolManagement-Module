@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="/includes/body.jsp"%>
+<%@include file="/includes/navbar.jsp"%>
 <html>
 <head>
     <title>Title</title>
@@ -25,7 +25,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 </head>
 <body>
-<br><br>
+<br><br><br><br>
+
 <div class="container">
     <div class="row">
         <div class="col-8">

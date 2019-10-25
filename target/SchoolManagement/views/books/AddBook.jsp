@@ -6,9 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="/includes/body.jsp"%>
+<%@include file="/includes/navbar.jsp"%>
 <%@include file="/views/books/SearchBookById.jsp"%>
-<%@include file="/includes/links.jsp"%>
 
 <html>
 <head>
@@ -16,6 +15,7 @@
 
 </head>
 <body>
+<br><br><br><br>
 <div class="container">
     <div class="row">
         <div class="col-8">
@@ -80,6 +80,13 @@
     h4 {
         margin: 2rem 0rem 1rem 0rem;
     }
+
+    /*@media screen and (min-width: 320px) {*/
+        /*body {*/
+            /*font-size: 0.5em;*/
+        /*}*/
+
+    /*}*/
 </style>
 
 </body>
