@@ -6,6 +6,7 @@ import com.systechInterns.Beans.IssueI;
 import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
 
+import com.systechInterns.studentmodule.Student;
 import com.systechInterns.webservices.IssueWs;
 
 import javax.ejb.EJB;
@@ -44,12 +45,11 @@ public class ReturnBookServlet extends HttpServlet {
         try {
             Map<String, String> param = new HashMap<>();
             param.put("registrationNumber", regNo);
-           Book book = bookBeanI.searchBookByIsbn(bookIsbn);
+           Book book = bookBeanI.getIsbn(bookIsbn);
             if (book.getIsbn().equalsIgnoreCase(bookIsbn)) {
+                book.setAvailable(true);
                 long studentId = issueWs.getStudentId(new Gson().toJson(param));
-
-                    bookBeanI.returnBook(bookIsbn,studentId);
-                    book.setAvailable(true);
+                bookBeanI.returnBook(bookIsbn,studentId);
                 }
 
             resp.sendRedirect("index.jsp");

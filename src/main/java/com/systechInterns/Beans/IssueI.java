@@ -40,6 +40,7 @@ public interface IssueI extends BeanI<Issue> {
     List<Issue> findIssuesForStudent(long studentId);
     List<Issue> deleteIssuesForStudent(long studentId, String bookIsbn);
     Issue StudentLibraryDetails(String regNo);
+    Issue renewBook(long studentId, String bookIsbn);
     List<Issue> calculateFine(long StudentId, Date dateOfReturn, Date dateRequiredToReturn, String bookIsbn);
 
 }

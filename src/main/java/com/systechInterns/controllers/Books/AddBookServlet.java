@@ -10,18 +10,35 @@ import com.systechInterns.library.Publisher;
 import com.systechInterns.studentmodule.Name;
 
 
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 
+@DeclareRoles({"LIBRARIAN","STUDENT"})
+@RolesAllowed({"LIBRARIAN"})
 @WebServlet(name = "addBook", urlPatterns = "/addBook")
+//@FormAuthenticationMechanismDefinition(
+//        loginToContinue = @LoginToContinue(
+//                loginPage = "/views/userLogin/login.jsp"))
+//@ServletSecurity(
+//        value = @HttpConstraint(rolesAllowed = {"LIBRARIAN"}),
+//        httpMethodConstraints = {
+//
+//                @HttpMethodConstraint(
+//                        value = "POST",
+//                        rolesAllowed = {"LIBRARIAN"})
+//        })
+
+//@ServletSecurity(@HttpConstraint(rolesAllowed = "LIBRARIAN"))
+
 public class AddBookServlet extends HttpServlet {
     @EJB
     BookBeanI bookBeanI;

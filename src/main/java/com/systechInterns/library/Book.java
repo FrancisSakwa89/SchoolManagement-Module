@@ -1,20 +1,22 @@
 package com.systechInterns.library;
 
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.event.Observes;
+import javax.annotation.security.DeclareRoles;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@DeclareRoles({"LIBRARIAN","STUDENT"})
 @NamedQueries({
         @NamedQuery(name = "NQ_SELECT_BOOKS", query = "select m from Book m"),
         @NamedQuery(name = "NQ_SELECT_BOOKS_BY_ISBN", query = "select m from Book m where m.isbn=:bookIsbn"),
         @NamedQuery(name = "NQ_FIND_BOOK_BY_NAME",query = "select m from Book m where m.title = :bookName"),
         @NamedQuery(name = "NQ_FIND_BOOK_STUDENT",query = "select m from Student m where m.id = :id"),
         @NamedQuery(name = "NQ_FIND_BOOK_BORROWED",query = "select m from Book m where m.isAvailable = false"),
-        @NamedQuery(name = "NQ_FIND_AVAILABLE_BOOK",query = "select m from Book m where m.isAvailable = true")
+        @NamedQuery(name = "NQ_FIND_AVAILABLE_BOOK",query = "select m from Book m where m.isAvailable = true"),
+        @NamedQuery(name = "NQ_S_BOOK",query = "select m from Book m where m.isbn = : bookIsbn")
+
 })
 
 @Table(name = "tbl_books")

@@ -121,13 +121,23 @@ public class BookWs {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/searchBook")
+    @Path("/sb")
     public Response searchBook(String json) throws SearchedBookNotFoundException {
         JsonParser jp = new JsonParser();
         JsonObject jsonObject = jp.parse(json).getAsJsonObject();
-        String bookIsbn = jsonObject.get("bookIsbn").getAsString();
+        String bookIsbn = jsonObject.get("isbn").getAsString();
+        System.out.println(json);
+        Book book = bookBeanI.findBook(bookIsbn);
+        System.out.println(book);
+        if (book != null) {
+            customResponse.setData(book);
 
-        return Response.ok().entity(bookBeanI.getIsbn(new Gson().toJson(bookIsbn))).build();
+        }
+        else{
+            customResponse.setMessage("not found");
+            logger.error("An error was encountered when querying book details..");
+        }
+        return Response.ok().entity(customResponse).build();
     }
 
 }

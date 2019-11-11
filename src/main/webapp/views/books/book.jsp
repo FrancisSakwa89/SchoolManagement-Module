@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/includes/navbar.jsp"%>
-<%@include file="/views/books/SearchBookById.jsp"%>
 <html>
 <head>
     <title>Title</title>
@@ -27,7 +26,12 @@
 </head>
 <body>
 <br><br><br><br>
-
+<% //In case, if Admin session is not set, redirect to Login page
+    if((request.getSession(false).getAttribute("userId")== null) )
+    {
+%>
+<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
+<%} %>
 <div class="container">
     <div class="row">
         <div class="col-8">

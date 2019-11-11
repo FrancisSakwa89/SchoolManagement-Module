@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit;
 @Stateless
 @Local
 @Path("/issues")
+@SuppressWarnings("ALL")
 public class IssueWs {
     @EJB
     IssueI issueI;
@@ -68,12 +69,11 @@ public class IssueWs {
                 Date dateOfIssue = new Date();
                 String returnDate = jsonObject.get("dateOfReturn").getAsString();
                 System.out.println(returnDate);
-                SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
-                Date date1 = myFormat.parse(String.valueOf(dateOfIssue));
+                SimpleDateFormat myFormat = new SimpleDateFormat("yyy-MM-dd");
                 Date date2 = myFormat.parse(returnDate);
 
-                long diff = date2.getTime() - date1.getTime();
-                int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+                int diff = (int) (date2.getTime() - dateOfIssue.getTime());
+                int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)+ 1;
 
                 System.out.println("Issue period is: "+ issuePeriod);
                 if (student != null) {
@@ -110,6 +110,64 @@ public class IssueWs {
         logger.error("Error occurred while issuing book ");
         return Response.ok().entity(customResponse).build();
     }
+
+
+
+
+    @POST
+    @Path("/renew")
+    public Response renewBook(String json) {
+        try {
+            JsonParser jp = new JsonParser();
+            JsonObject jsonObject = jp.parse(json).getAsJsonObject();
+            String registrationNumber = jsonObject.get("registrationNumber").getAsString();
+            String isbn = jsonObject.get("bookIsbn").getAsString();
+            Book book = bookBeanI.searchBookByIsbn(isbn);
+                Student student = new Gson().fromJson(new Util().findStudentByRegNo(registrationNumber), Student.class);
+                Date dateOfIssue = new Date();
+                String returnDate = jsonObject.get("dateOfReturn").getAsString();
+                System.out.println(returnDate);
+                SimpleDateFormat myFormat = new SimpleDateFormat("yyy-MM-dd");
+                Date date2 = myFormat.parse(returnDate);
+
+                int diff = (int) (date2.getTime() - dateOfIssue.getTime());
+                int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)+ 1;
+
+                System.out.println("Issue period is: "+ issuePeriod);
+                if (student != null) {
+
+                    long studentId = student.getId();
+                    System.out.println(student);
+                    Issue issue = issueI.StudentLibraryDetails(registrationNumber);
+                    issue.setBook(book);
+                    issue.setDateOfIssue(dateOfIssue);
+                    issue.setDateOfReturn(date2);
+                    issue.setIssuePeriod(issuePeriod);
+                    issue.setRenewCount(0);
+                    issue.setStudentId(studentId);
+                    issueEvent.fire(issue);
+                    sms.setStatus("Book successfully issued to" + student);
+                    System.out.println(sms.getStatus());
+
+                    System.out.println("added issue to " + issue);
+                    System.out.println(sms);
+                    return Response.ok().entity(new Gson().toJson(issueI.renewBook(studentId,isbn))).build();
+
+                }
+
+        } catch (Exception e) {
+            System.out.println("Error renewing book....");
+            e.printStackTrace();
+        }
+
+        customResponse.setMessage("Was not able to issue book to the provided student number..");
+        customResponse.setStatus(false);
+        logger.error("Error occurred while renewing book ");
+        return Response.ok().entity(customResponse).build();
+    }
+
+
+
 
 
     @GET
@@ -210,6 +268,7 @@ public class IssueWs {
             long studentId = student.getId();
             System.out.println(" Student id is: " + studentId);
         }
+        assert student != null;
         return student.getId();
     }
 

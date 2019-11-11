@@ -23,69 +23,91 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+    <!-- Bootstrap CSS -->
+
+    <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">--%>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+
+    <!--fontawesome-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
-<%--navbar-light bg-light--%>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <img src="https://systechafrica.com/wp-content/uploads/2017/12/logo-1.png"><a class="navbar-brand" href="#"></a>
 
-    <button  class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+
+    <%--<a class="navbar-brand"><img src="https://systechafrica.com/wp-content/uploads/2017/12/logo-1.png"  class="img-responsive"></a>--%>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-        <ul class="navbar-nav ml-auto nav-flex-icons">
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="nav">
+
+        <ul class="navbar-nav">
+
+            <li class="nav-item" >
+
+                <a class="nav-link" href="index.jsp">HOME</a>
+
+            </li>
+
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light">
-                    <i class="fab fa-twitter"></i>
-                </a>
+
+                <a class="nav-link " href="acc">PROFILE</a>
+
             </li>
+
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light">
-                    <i class="fab fa-google-plus-g"></i>
-                </a>
+
+                <a class="nav-link " href="logout">LOGOUT</a>
+
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    PUBLISHER PORTAL
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                     aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="addPub">Add Publisher</a>
-                    <a class="dropdown-item" href="#">View Publishers</a>
-                </div>
+
+            <li class="nav-item">
+
+                <a class="nav-link " href="bd">DOWNLOAD</a>
+
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    STUDENT PORTAL
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                     aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="stuDetails">Lib Details</a>
-                    <a class="dropdown-item" href="books">Borrow Book</a>
-                    <a class="dropdown-item" href="returnBook">Return Book</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    LIBRARY PORTAL
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                     aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="addBook">Add Book</a>
-                    <a class="dropdown-item" href="api/books/getAvailableBooks">Available Books</a>
-                    <a class="dropdown-item" href="api/issues/list">Books Issue History</a>
-                    <a class="dropdown-item" href="api/returns/list">Returned Books History</a>
-                    <a class="dropdown-item" href="api/books/getBookBorrowed">Books Not Available</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="allBooks">All Books</a>
-                </div>
-            </li>
+
         </ul>
+
+
+        <!-- Search bar -->
+
+        <form class="form-inline ml-3" method="post" action="searchBook">
+
+            <div class="input-group">
+
+                <input type="text"  required name="bookIsbn" class="form-control " placeholder="Search Book Isbn" >
+
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </div>
+
+        </form>
+
     </div>
+
 </nav>
 
 </body>

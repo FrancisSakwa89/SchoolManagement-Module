@@ -5,6 +5,8 @@ import com.systechInterns.library.Book;
 import com.systechInterns.library.Issue;
 
 
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Local;
 import java.sql.SQLException;
 import java.util.List;
@@ -20,6 +22,6 @@ public interface BookBeanI extends BeanI<Book> {
     Book searchBookByIsbn(String bookIsbn) throws SearchedBookNotFoundException;
     Book getIsbn(String bookIsbn);
     List<Issue> returnBook(String bookIsbn, long studentId) throws SearchedBookNotFoundException;
-
+    Book findBook(String isbn);
 
 }

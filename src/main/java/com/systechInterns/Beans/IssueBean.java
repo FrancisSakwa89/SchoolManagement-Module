@@ -12,6 +12,7 @@ import javax.ejb.Local;
 import javax.ejb.Stateless;
 import java.sql.SQLException;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 @Stateless
 @Local
@@ -95,6 +96,16 @@ public class IssueBean extends Bean<Issue> implements IssueI {
     }
 
     @Override
+    public Issue renewBook(long studentId, String bookIsbn) {
+        return (Issue) this
+                .entityManager
+                .createNamedQuery("NQ_RENEW_BOOK")
+                .setParameter("studentId", studentId)
+                .setParameter("bookIsbn", bookIsbn)
+                .getSingleResult();
+    }
+
+    @Override
     public List<Issue> calculateFine(long StudentId, Date dateOfReturn, Date dateRequiredToReturn,String bookIsbn) {
             Double amount = 10.0;
             List<Issue> issueList = this
@@ -109,11 +120,14 @@ public class IssueBean extends Bean<Issue> implements IssueI {
             e.printStackTrace();
         }
         dateOfReturn = new Date();
+
             for (Issue issue : issueList){
                 dateRequiredToReturn = issue.getDateOfReturn();
-                if (dateOfReturn.getDay() - dateRequiredToReturn.getDay() > 0) {
-                    double fine = dateOfReturn.getDay() - dateRequiredToReturn.getDay();
-                    double totalFine = fine * amount;
+                int diff = (int) (dateOfReturn.getTime() - dateRequiredToReturn.getTime());
+                int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+                if (issuePeriod > 0) {
+
+                    double totalFine = issuePeriod * amount;
                     System.out.println("Your fine is: "+ totalFine);
                 }
             }

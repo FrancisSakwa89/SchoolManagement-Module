@@ -11,12 +11,15 @@ import com.systechInterns.library.Return;
 import com.systechInterns.webservices.IssueWs;
 import org.jboss.logging.Logger;
 
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import javax.annotation.PostConstruct;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
@@ -128,6 +131,28 @@ public class BookBean extends Bean<Book> implements BookBeanI {
 //            }
     }
 
+    @Override
+    public Book findBook(String isbn) {
+        List<Book> issueList =  this
+                .entityManager
+                .createNamedQuery("NQ_S_BOOK")
+                .setParameter("bookIsbn",isbn)
+
+                .getResultList();
+        for (Book book: issueList){
+            int count = 0;
+            if (book.getIsbn().equalsIgnoreCase(isbn)){
+                count++;
+                int booNo =+ count;
+                System.out.println("Books found are .."+ booNo);
+                System.out.println("Details .."+ book);
+            }
+            else {
+                System.out.println("Found no books with that isbn...");
+            }
+        }
+        return issueList.size()>0?issueList.get(0):null;
+    }
 
     @Override
     public List<Issue> returnBook(String bookIsbn, long studentId) throws SearchedBookNotFoundException {
@@ -141,7 +166,10 @@ public class BookBean extends Bean<Book> implements BookBeanI {
             Sms sms = new Sms();
             Date dateOfReturn = new Date();
             Date dateRequiredToBeReturned = issue.getDateOfReturn();
-            if (dateOfReturn.getDay() - dateRequiredToBeReturned.getDay() > 0) {
+            int diff = (int) (dateOfReturn.getTime() - dateRequiredToBeReturned.getTime());
+            int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+
+            if (issuePeriod > 0) {
                 issueI.calculateFine(studentId,dateOfReturn,dateRequiredToBeReturned,bookIsbn);
                 sms.setStatus("You have a fine to pay due to late returning of the book...Kindly clear with the finance manager..");
                 returnBookEvent.fire(issue);

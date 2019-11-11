@@ -29,6 +29,16 @@
 <%--<p style='color:red;'>${message}</p>--%>
 
 <br><br><br><br>
+<% //In case, if Admin session is not set, redirect to Login page
+    response.setHeader("Cache-Control", "no-cache");
+    response.setHeader("Cache-Control", "no-store, must-revalidate" );
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+    if((request.getSession(false).getAttribute("userId")== null) )
+    {
+%>
+<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
+<%} %>
 <form style="margin-left: 25%" method="post" action="api/issues/getBookByTitle">
     <div class="form-row align-items-center">
         <div class="col-auto">

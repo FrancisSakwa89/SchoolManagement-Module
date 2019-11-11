@@ -1,6 +1,17 @@
 <html>
 <%@include file="includes/navbar.jsp"%>
 <body>
+<% //In case, if Admin session is not set, redirect to Login page
+    response.setHeader("Cache-Control", "no-cache");
+    response.setHeader("Cache-Control", "no-store, must-revalidate" );
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+    if((request.getSession(false).getAttribute("userId")== null) )
+    {
+%>
+<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
+<%} %>
+
 <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">

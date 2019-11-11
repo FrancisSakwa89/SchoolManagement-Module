@@ -13,7 +13,8 @@ import java.util.Date;
         @NamedQuery(name = "NQ_GET_STUDENT_ID",query = "select s from Issue s where s.studentId = : studentId"),
         @NamedQuery(name = "NQ_GET_AND_ISBN",query = "select s from Issue s where s.studentId = : studentId and s.book.isbn=:bookIsbn"),
         @NamedQuery(name = "NQ_DELETE_BOOK_ID",query = "select s from Issue s where s.book.id = : bookId"),
-        @NamedQuery(name = "NQ_SELECT_BOOK",query = "select s from Issue s where s.book.isbn = : bookIsbn and s.book.isAvailable=true")
+        @NamedQuery(name = "NQ_SELECT_BOOK",query = "select s from Issue s where s.book.isbn = : bookIsbn and s.book.isAvailable=true"),
+        @NamedQuery(name = "NQ_RENEW_BOOK",query = "select s from Issue s where s.book.isbn = : bookIsbn and studentId=:studentId"),
 })
 @Table(name = "tbl_issues")
 public class Issue {

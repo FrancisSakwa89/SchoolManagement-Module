@@ -26,7 +26,17 @@
 </head>
 <body>
 <br><br><br><br>
-
+<br><br><br><br>
+<% //In case, if Admin session is not set, redirect to Login page
+    response.setHeader("Cache-Control", "no-cache");
+    response.setHeader("Cache-Control", "no-store, must-revalidate" );
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+    if((request.getSession(false).getAttribute("userId")== null) )
+    {
+%>
+<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
+<%} %>
 <div class="container">
     <div class="row">
         <div class="col-8">
@@ -40,6 +50,8 @@
                 <button type="reset" class="btn btn-danger">Cancel</button>
 
             </form>
+            <button class="btn btn-info" onClick="history.go(0);">Refresh Page</button>
+
 
 
         </div>

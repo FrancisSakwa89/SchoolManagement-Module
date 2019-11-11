@@ -33,7 +33,12 @@
 <br>
 <body>
 <br><br><br><br>
-
+<%--<% //In case, if Admin session is not set, redirect to Login page--%>
+    <%--if((request.getSession(false).getAttribute("userId")== null) )--%>
+    <%--{--%>
+<%--%>--%>
+<%--<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>--%>
+<%--<%} %>--%>
 <div class="container">
     <div class="table-responsive">
         <h1>ALL BOOKS</h1>

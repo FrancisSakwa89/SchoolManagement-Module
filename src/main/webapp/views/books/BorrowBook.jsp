@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/includes/navbar.jsp"%>
-<%@include file="/views/books/SearchBookById.jsp"%>
 
 <html>
 <head>
@@ -27,8 +26,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 </head>
 <body>
-<br><br><br><br>
-
+<br><br>
+<% //In case, if Admin session is not set, redirect to Login page
+    if((request.getSession(false).getAttribute("userId")== null) )
+    {
+%>
+<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
+<%} %>
 <div class="container">
     <div class="row">
         <div class="col-8">

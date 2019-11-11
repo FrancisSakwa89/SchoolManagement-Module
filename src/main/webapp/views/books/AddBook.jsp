@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/includes/navbar.jsp"%>
-<%@include file="/views/books/SearchBookById.jsp"%>
 
 <html>
 <head>
@@ -15,7 +14,17 @@
 
 </head>
 <body>
-<br><br><br><br>
+<br><br>
+<% //In case, if Admin session is not set, redirect to Login page
+    response.setHeader("Cache-Control", "no-cache");
+    response.setHeader("Cache-Control", "no-store, must-revalidate" );
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+    if((request.getSession(false).getAttribute("userId")== null) )
+    {
+%>
+<jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
+<%} %>
 <div class="container">
     <div class="row">
         <div class="col-8">
