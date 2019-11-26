@@ -6,122 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745c0d4b-91ae-451a-95f4-1ee21a70fd82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/PdfServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/BorrowBookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ListBooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/librarian/LibrarianBooksServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentAllBooksServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentBooksViewServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/ErrorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/LoginErrorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/student/StudentLibraryDetailsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/dashboard/LibrarianDashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/errors/errorPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/errors/loginError.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/student/studentDash.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/student/studentTable.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/contact/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9cbd136e-78f0-4278-afaa-4aa6a3299ed7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9cbd136e-78f0-4278-afaa-4aa6a3299ed7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/AddBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/AddBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/DownloadCsv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadExcelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/DownloadExcelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/GenerateCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/GenerateCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/Pdf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/PdfServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/RenewBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/RenewBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/ReturnBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ReturnBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/SearchBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/StudentLibraryDetailsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentLibraryDetailsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/allBooksServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/booksCSVServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/booksCSVServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/BorrowBookServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/FetchData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/CodeVerificationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/CodeVerificationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ForgotPasswordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ForgotPasswordServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/NewPasswordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/NewPasswordServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/RegisterAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/RegisterAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ResendCodeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ResendCodeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UpdateAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/UpdateAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/loginFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Name.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/allBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/allBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/UNDERSTANDING-PENSIONS-BY-CPA-ODUNDO.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/franco.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBeanI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBeanI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/StudentLibraryDetailsServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/allBooksServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Name.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/BookWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/BookWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/IssueWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/IssueWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/includes/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/AddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/AddBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/BorrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/BorrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/allBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/allBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBeanI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBeanI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/StudentLibraryDetailsServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/allBooksServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Name.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/BookWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/BookWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/IssueWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/IssueWs.class" afterDir="false" />
-    </list>
+    <list default="true" id="745c0d4b-91ae-451a-95f4-1ee21a70fd82" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -360,7 +245,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ResendCodeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="59">
               <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
@@ -584,7 +469,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574772722284" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574773233053" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BulkySms" />
@@ -838,18 +723,17 @@
       <workItem from="1574396740846" duration="21487000" />
       <workItem from="1574592404250" duration="10476000" />
       <workItem from="1574656235667" duration="834000" />
-      <workItem from="1574769722662" duration="2719000" />
+      <workItem from="1574769722662" duration="3191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="702293000" />
+    <option name="totallyTimeSpent" value="702765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="143" y="33" width="1221" height="734" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.2068085" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.2068085" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -866,7 +750,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32733223" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.62092626" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.62086093" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50151515" side_tool="true" weight="0.5725938" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.6089194" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32933104" />
@@ -1330,7 +1214,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ResendCodeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="59">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>

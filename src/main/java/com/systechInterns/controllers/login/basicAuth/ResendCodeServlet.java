@@ -34,7 +34,6 @@ public class ResendCodeServlet extends HttpServlet {
             String code = String.valueOf(codeBeanI.sendCode(req));
             String content = "Hi, here is your user code kindly use it to login "+" "+ code;
 
-
             try {
                 emailFormat.sendEmail(subject,content,mail);
 
