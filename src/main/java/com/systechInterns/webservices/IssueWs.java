@@ -64,7 +64,7 @@ public class IssueWs {
             String registrationNumber = jsonObject.get("registrationNumber").getAsString();
             String isbn = jsonObject.get("bookIsbn").getAsString();
             Book book = bookBeanI.searchBookByIsbn(isbn);
-            if (book.isAvailable()) {
+            if (book != null && book.isAvailable()) {
                 Student student = new Gson().fromJson(new Util().findStudentByRegNo(registrationNumber), Student.class);
                 Date dateOfIssue = new Date();
                 String returnDate = jsonObject.get("dateOfReturn").getAsString();
@@ -255,6 +255,31 @@ public class IssueWs {
 
     }
 
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/stuDetails")
+    public Response getStudentDetails(String json) {
+        System.out.println(json);
+        JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
+        String registrationNumber = jsonObject.get("registrationNumber").getAsString();
+        String studentjson = new Util().findStudentByRegNo(registrationNumber);
+        System.out.println(studentjson);
+        Student student = new Gson().fromJson(studentjson, Student.class);
+        if (student != null) {
+            long studentId = student.getId();
+            System.out.println(student);
+
+            return Response.ok().entity(new Gson().toJson(student)).build();
+
+        }
+
+
+        customResponse.setMessage("Student with the provided registration number does not exist...");
+        logger.error("Student does not exist .." + studentjson);
+        return Response.ok().entity(customResponse).build();
+
+    }
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)

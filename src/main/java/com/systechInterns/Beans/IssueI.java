@@ -41,6 +41,6 @@ public interface IssueI extends BeanI<Issue> {
     List<Issue> deleteIssuesForStudent(long studentId, String bookIsbn);
     Issue StudentLibraryDetails(String regNo);
     Issue renewBook(long studentId, String bookIsbn);
-    List<Issue> calculateFine(long StudentId, Date dateOfReturn, Date dateRequiredToReturn, String bookIsbn);
+    double calculateFine(long StudentId,String bookIsbn, Date dateOfReturn, Date dateRequiredToReturn);
 
 }

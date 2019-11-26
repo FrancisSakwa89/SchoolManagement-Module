@@ -8,11 +8,8 @@ import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
 import com.systechInterns.library.Issue;
 import com.systechInterns.library.Return;
-import com.systechInterns.webservices.IssueWs;
 import org.jboss.logging.Logger;
 
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
@@ -57,13 +54,23 @@ public class BookBean extends Bean<Book> implements BookBeanI {
     }
 
     @Override
-    public Book findByName(String name) {
+    public Book findAll() throws SQLException {
+        List<Book> bookList=  this
+                .entityManager
+                .createNamedQuery("NQ_SELECT_BOOKS")
+                .getResultList();
+        logger.info(new Gson().toJson(bookList));
+        return bookList.size()>0?bookList.get(0):null;
+    }
 
-        return (Book) this
+    @Override
+    public Book findByName(String name) {
+        List<Book> bookList = this
                 .entityManager
                 .createNamedQuery("NQ_FIND_BOOK_BY_NAME")
                 .setParameter("bookName", name)
-                .getSingleResult();
+                .getResultList();
+        return bookList.size() > 0 ? bookList.get(0) : null;
 
     }
 
@@ -102,23 +109,24 @@ public class BookBean extends Bean<Book> implements BookBeanI {
 
     @Override
     public Book searchBookByIsbn(String bookIsbn) {
-        return (Book) this
+        List<Book> bookList = this
                     .entityManager
                     .createNamedQuery("NQ_SELECT_BOOKS_BY_ISBN")
                     .setParameter("bookIsbn",bookIsbn)
-                    .getSingleResult();
+                    .getResultList();
+        return bookList.size() > 0 ? bookList.get(0) : null;
 
 
     }
 
     @Override
     public Book getIsbn(String bookIsbn) {
-            return (Book) this
+            List<Book> bookList =  this
                     .entityManager
                     .createNamedQuery("NQ_SELECT_BOOKS_BY_ISBN")
                     .setParameter("bookIsbn",bookIsbn)
-                    .getSingleResult();
-//            return bookList.size()>0?bookList.get(0):null;
+                    .getResultList();
+            return bookList.size()>0?bookList.get(0):null;
 
 //            for (Book book: bookList){
 //                if (book.getIsbn().equalsIgnoreCase(bookIsbn)){
@@ -170,7 +178,7 @@ public class BookBean extends Bean<Book> implements BookBeanI {
             int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 
             if (issuePeriod > 0) {
-                issueI.calculateFine(studentId,dateOfReturn,dateRequiredToBeReturned,bookIsbn);
+                issueI.calculateFine(studentId,bookIsbn,dateOfReturn,dateRequiredToBeReturned);
                 sms.setStatus("You have a fine to pay due to late returning of the book...Kindly clear with the finance manager..");
                 returnBookEvent.fire(issue);
                 Return rt = new Return();

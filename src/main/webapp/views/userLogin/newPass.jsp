@@ -32,8 +32,12 @@
                                 <label for="newPass">New Password:</label><br>
                                 <input type="text" required name="newPass" id="newPass" class="form-control">
                             </div>
+                            <div class="form-group">
+                                <label for="pass2">Confirm Password:</label><br>
+                                <input type="text" required name="pass2" id="pass2" class="form-control">
+                            </div>
                                 <div class="form-group">
-                                    <input type="submit" name="submit" class="btn btn-success btn-md" value="Confirm">
+                                    <input type="submit" name="submit" class="btn btn-success btn-md" value="Save">
                                     <input type="reset" name="reset" class="btn btn-danger btn-md" value="Cancel">
                                 </div>
 

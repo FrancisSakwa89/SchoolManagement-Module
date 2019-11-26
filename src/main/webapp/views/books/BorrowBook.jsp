@@ -33,13 +33,15 @@
 %>
 <jsp:forward page="/views/userLogin/login.jsp"></jsp:forward>
 <%} %>
+
+<br><br>
 <div class="container">
     <div class="row">
         <div class="col-8">
             <form method="post" action="books" style="margin-left: 25%">
                 <div class="form-group">
                     <label for="bookIsbn">Book ISBN Number</label>
-                    <input type="text" class="form-control" required name="bookIsbn" id="bookIsbn" aria-describedby="bookIsbn" placeholder="Book ISBN Number">
+                    <input type="text" class="form-control" required name="bookIsbn" id="bookIsbn" aria-describedby="bookIsbn" placeholder="Book ISBN Number" value="${book.isbn}" aria-readonly="true">
                     <small id="bookIsbn" class="form-text text-muted">Your information is safe with us.</small>
                 </div>
 

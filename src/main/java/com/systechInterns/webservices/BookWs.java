@@ -4,6 +4,7 @@ package com.systechInterns.webservices;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.mysql.fabric.xmlrpc.base.Data;
 import com.systechInterns.Beans.BookBeanI;
 import com.systechInterns.exceptions.SearchedBookNotFoundException;
 import com.systechInterns.library.Book;
@@ -33,19 +34,19 @@ public class BookWs {
 
     @POST
     @Path("/add")
-    public Response add(String json){
+    public Response add(String json) {
         try {
-            Book book = new Gson().fromJson(json,Book.class);
+            Book book = new Gson().fromJson(json, Book.class);
             book = bookBeanI.add(book);
             customResponse.setData(book);
             customResponse.setMessage("Created an Issue");
             customResponse.setStatus(true);
             return Response.ok().entity(customResponse).build();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("got an error adding book");
             e.printStackTrace();
         }
-        logger.info("Message: "+customResponse.getMessage()+" data"+customResponse.getData()+ " status: "+customResponse.isStatus());
+        logger.info("Message: " + customResponse.getMessage() + " data" + customResponse.getData() + " status: " + customResponse.isStatus());
         return Response.ok().entity(customResponse).build();
 
     }
@@ -59,7 +60,7 @@ public class BookWs {
         customResponse.setMessage("All books in the library");
         customResponse.setStatus(true);
 
-        logger.info("Message: "+customResponse.getMessage()+" data"+customResponse.getData()+customResponse.isStatus());
+        logger.info("Message: " + customResponse.getMessage() + " data" + customResponse.getData() + customResponse.isStatus());
         return Response.ok().entity(customResponse).build();
     }
 
@@ -68,17 +69,18 @@ public class BookWs {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getBookById(@PathParam("id") long id) {
-            return Response.ok().entity(bookBeanI.findById(id)).build();
+        return Response.ok().entity(bookBeanI.findById(id)).build();
 
     }
+
     @PUT
     @Path("/{id}/update")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateBookById(long id, String json){
+    public Response updateBookById(long id, String json) {
         Book book = new Book();
         book.setId(id);
-        System.out.println("updated successfully"+" id: "+ book.getId()+" "+book.getTitle()+" "+book.getIsbn()+" "+book.getPublisher()+" "+book.getAuthors());
+        System.out.println("updated successfully" + " id: " + book.getId() + " " + book.getTitle() + " " + book.getIsbn() + " " + book.getPublisher() + " " + book.getAuthors());
         return Response.ok().entity(bookBeanI.update(book)).build();
 
     }
@@ -88,20 +90,19 @@ public class BookWs {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/{id}/delete")
-    public Response deleteBook(@PathParam("id") int id){
+    public Response deleteBook(@PathParam("id") int id) {
 
         Book book = bookBeanI.read(id);
         book.setId(id);
-        System.out.println("deleted successfully"+" id: "+ book.getId()+" "+book.getTitle()+" "+book.getIsbn()+" "+book.getPublisher()+" "+book.getAuthors());
+        System.out.println("deleted successfully" + " id: " + book.getId() + " " + book.getTitle() + " " + book.getIsbn() + " " + book.getPublisher() + " " + book.getAuthors());
         return Response.ok().entity(bookBeanI.delete(book)).build();
     }
-
 
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/getBookBorrowed")
-    public Response getBorrowedBook(){
+    public Response getBorrowedBook() {
         customResponse.setData(bookBeanI.getBorrowedBooks());
         customResponse.setMessage("This are the books not available..");
         customResponse.setStatus(true);
@@ -112,7 +113,7 @@ public class BookWs {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/getAvailableBooks")
-    public Response getAvailableBooks(){
+    public Response getAvailableBooks() {
         customResponse.setData(bookBeanI.getAvailableBooks());
         customResponse.setMessage("This are the available books..");
         customResponse.setStatus(true);
@@ -132,8 +133,7 @@ public class BookWs {
         if (book != null) {
             customResponse.setData(book);
 
-        }
-        else{
+        } else {
             customResponse.setMessage("not found");
             logger.error("An error was encountered when querying book details..");
         }

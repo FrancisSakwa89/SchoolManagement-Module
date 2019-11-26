@@ -9,5 +9,6 @@ import java.util.List;
 @Local
 public interface AuthorI extends BeanI<Author> {
     List<Author> readAll() throws SQLException;
+    Author getAtLeastOne();
     List<Author> findByName(String name);
 }

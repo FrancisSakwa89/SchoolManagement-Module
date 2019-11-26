@@ -4,10 +4,15 @@ import com.systechInterns.library.UserRandomCode;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Local;
+import javax.ejb.Schedule;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 @Stateless
 @Local
@@ -35,6 +40,7 @@ public class CodeBean extends Bean<UserRandomCode> implements CodeBeanI {
                 UserRandomCode user = new UserRandomCode();
                 user.setUserId(userId);
                 user.setCode(String.valueOf(text));
+                Date date = new Date();
                 add(user);
                 System.out.println("Created user..");
             }
@@ -85,4 +91,18 @@ public class CodeBean extends Bean<UserRandomCode> implements CodeBeanI {
         return userLoginList.size() > 0 ? userLoginList.get(0) : null;
 
     }
+
+//    @Schedule(minute="*/2", hour="*", persistent = false)
+//    public void checkCodeValidity(String code){
+//        UserRandomCode user = checkUser(code);
+//        Date dateSend = user.getDate();
+//        Date date = new Date();
+//        int diff = (int) (dateSend.getTime() - date.getTime());
+//        int sendPeriod = (int) TimeUnit.MINUTES.convert(diff, TimeUnit.MILLISECONDS);
+//        if (sendPeriod > 2){
+//            delete(user);
+//            System.out.println("Performing check...");
+//        }
+//    }
+
 }

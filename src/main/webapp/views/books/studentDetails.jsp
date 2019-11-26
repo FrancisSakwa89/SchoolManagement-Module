@@ -47,10 +47,10 @@
                 </div>
 
                 <button type="submit" class="btn btn-info">Submit</button>
-                <button type="reset" class="btn btn-danger">Cancel</button>
+                <button type="reset" class="btn btn-danger" onClick="history.go(0);">Cancel</button>
 
             </form>
-            <button class="btn btn-info" onClick="history.go(0);">Refresh Page</button>
+            <%--<button class="btn btn-info" onClick="history.go(0);">Refresh Page</button>--%>
 
 
 

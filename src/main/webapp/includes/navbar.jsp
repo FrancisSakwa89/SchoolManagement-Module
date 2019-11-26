@@ -51,7 +51,7 @@
 
 <!-- navbar -->
 
-<nav class="navbar navbar-expand-md navbar-light fixed-top">
+<nav class="navbar navbar-expand-md navbar-light">
 
     <%--<a class="navbar-brand"><img src="https://systechafrica.com/wp-content/uploads/2017/12/logo-1.png"  class="img-responsive"></a>--%>
 

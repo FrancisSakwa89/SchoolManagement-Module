@@ -1,7 +1,6 @@
 package com.systechInterns.studentmodule;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
 
 @Embeddable
 public class Name {

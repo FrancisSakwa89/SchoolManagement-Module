@@ -18,6 +18,15 @@ public class AuthorBean extends Bean<Author> implements AuthorI  {
     }
 
     @Override
+    public Author getAtLeastOne() {
+        List<Author> authors = this
+                .entityManager
+                .createNamedQuery("NQ_SELECT_AUTHOR")
+                .getResultList();
+        return authors.size() > 0 ? authors.get(0) : null;
+    }
+
+    @Override
     public List<Author> findByName(String name) {
         return this
                 .entityManager

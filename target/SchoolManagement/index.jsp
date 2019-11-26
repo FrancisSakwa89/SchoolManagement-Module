@@ -13,64 +13,106 @@
 <%} %>
 
 <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4">First Slide</h2>
-                    <p class="lead">This is a description for the first slide.</p>
-                </div>
-            </div>
-            <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=707&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4">Second Slide</h2>
-                    <p class="lead">This is a description for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1526649661456-89c7ed4d00b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=871&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4">Third Slide</h2>
-                    <p class="lead">This is a description for the third slide.</p>
-                </div>
-            </div>
 
-            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=625&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4">Third Slide</h2>
-                    <p class="lead">This is a description for the third slide.</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</header>
 <br><br>
-<%@include file="includes/footer.jsp"%>
+    <%--
+      Created by IntelliJ IDEA.
+      User: moringaschool
+      Date: 11/20/19
+      Time: 10:51 AM
+      To change this template use File | Settings | File Templates.
+    --%>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <html>
+    <head>
+        <title>Title</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+        <meta charset="utf-8">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+
+    <div class="container">
+        <br>
+    <div class="jumbotron" style="text-align: center;margin-right: 20%;margin-left: 20%">
+        <h2>Home Page</h2>
+        <!-- Card -->
+        <div class="card promoting-card">
+
+            <!-- Card content -->
+            <div class="card-body d-flex flex-row">
+
+                <!-- Avatar -->
+                <img src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                <!-- Content -->
+                <div>
+
+                    <!-- Title -->
+                    <h4 class="card-title font-weight-bold mb-2">SYSTECH LIBRARY MANAGEMENT MODULE</h4>
+                    <!-- Subtitle -->
+                    <p class="card-text"><i class="far fa-clock pr-2"></i></p>
+
+                </div>
+
+            </div>
+
+            <!-- Card image -->
+            <div class="view overlay">
+                <img class="card-img-top rounded-0" src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+
+                <div class="collapse-content">
+
+                    <!-- Text -->
+                    <p class="card-text collapse" id="collapseContent">This is a library management module</p>
+                    <!-- Button -->
+                    <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed"data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent">Read More</a>
+                    <a href="index.jsp" class="btn btn-info p-1 my-1 mr-0 mml-1 float-right">Explore</a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Card -->
+
+    </div>
+        <br>
+    </div>
+    </body>
+    </html>
 <style>
-    .carousel-item {
-        height: 100vh;
-        min-height: 350px;
-        background: no-repeat center center scroll;
+    body, html {
+        height: 100%; }
+
+    .container {
+        background-image: url("https://mdbootstrap.com/wp-content/uploads/2019/02/back.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
         -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+        background-size: cover; }
 </style>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.systechInterns.library;
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Entity
@@ -37,4 +38,13 @@ public class UserRandomCode {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
 }

@@ -106,14 +106,14 @@ public class IssueBean extends Bean<Issue> implements IssueI {
     }
 
     @Override
-    public List<Issue> calculateFine(long StudentId, Date dateOfReturn, Date dateRequiredToReturn,String bookIsbn) {
-            Double amount = 10.0;
-            List<Issue> issueList = this
-                    .entityManager
-                    .createNamedQuery("NQ_GET_AND_ISBN")
-                    .setParameter("studentId", StudentId)
-                    .setParameter("bookIsbn", bookIsbn)
-                    .getResultList();
+    public double calculateFine(long StudentId, String bookIsbn, Date dateOfReturn, Date dateRequiredToReturn) {
+        double amount = 10.0;
+        List<Issue> issueList = this
+                .entityManager
+                .createNamedQuery("NQ_GET_AND_ISBN")
+                .setParameter("studentId", StudentId)
+                .setParameter("bookIsbn", bookIsbn)
+                .getResultList();
         try {
             issueI.findIssuesForStudent(bookBeanI.searchBookByIsbn(bookIsbn).getId());
         } catch (SearchedBookNotFoundException e) {
@@ -121,23 +121,27 @@ public class IssueBean extends Bean<Issue> implements IssueI {
         }
         dateOfReturn = new Date();
 
-            for (Issue issue : issueList){
-                dateRequiredToReturn = issue.getDateOfReturn();
-                int diff = (int) (dateOfReturn.getTime() - dateRequiredToReturn.getTime());
-                int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-                if (issuePeriod > 0) {
+        for (Issue issue : issueList) {
+            dateRequiredToReturn = issue.getDateOfReturn();
+            int diff = (int) (dateOfReturn.getTime() - dateRequiredToReturn.getTime());
+            int issuePeriod = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+            if (issuePeriod > 0) {
 
-                    double totalFine = issuePeriod * amount;
-                    System.out.println("Your fine is: "+ totalFine);
-                }
+                double totalFine = issuePeriod * amount;
+                System.out.println("Your fine is: " + totalFine);
             }
+        }
 
-            return issueList;
+        return amount;
     }
-//    return bookList.size()>0?bookList.get(0):null;
+//    return issueList.size()>0?issueList.get(0):null;
 
+    public void findIfStudentQualifies(long studentId) {
 
 
     }
+
+
+}
 
 

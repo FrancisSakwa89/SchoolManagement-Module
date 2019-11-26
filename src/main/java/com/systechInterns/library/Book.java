@@ -37,6 +37,9 @@ public class Book {
     @Column(nullable = false, columnDefinition = "TINYINT(1)")
     private boolean isAvailable;
 
+    @Transient
+    private  String isAvailableStr;
+
     public Book() {
     }
 
@@ -93,6 +96,14 @@ public class Book {
 
     public void setAvailable(boolean available) {
         isAvailable = available;
+    }
+
+    public String getIsAvailableStr() {
+        return isAvailableStr;
+    }
+
+    public void setIsAvailableStr(String isAvailableStr) {
+        this.isAvailableStr = isAvailableStr;
     }
 
     @Override

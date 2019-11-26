@@ -63,7 +63,7 @@ public class LoginBean extends Bean<UserLogin> implements LoginBeanI {
 
                 .getResultList();
         for (UserLogin user : userLoginList) {
-            if (user.getUserId().equalsIgnoreCase(userId)) {
+            if (user.getUserId().equals(userId)) {
                 System.out.println("User found.." + user);
             } else {
                 System.out.println("User not found..");

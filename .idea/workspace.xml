@@ -7,109 +7,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745c0d4b-91ae-451a-95f4-1ee21a70fd82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBeanI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/FileUpload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBeanI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/ProfileBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/ProfileI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadCsv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/PdfServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/RenewBookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AccountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/CodeVerificationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ForgotPasswordServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/NewPasswordServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/RegisterAccountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ResendCodeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UpdateAccountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UserLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/loginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/books/DownloadBooks.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/books/renewBook.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/UpdateProfile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/bookResults.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/codeverification.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/message.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/PdfServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/BorrowBookServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ListBooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/librarian/LibrarianBooksServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentAllBooksServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentBooksViewServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/ErrorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/LoginErrorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/student/StudentLibraryDetailsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/dashboard/LibrarianDashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/errors/errorPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/errors/loginError.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/student/studentDash.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/student/studentTable.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/contact/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9cbd136e-78f0-4278-afaa-4aa6a3299ed7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9cbd136e-78f0-4278-afaa-4aa6a3299ed7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/AddBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/AddBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/ReturnBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/ReturnBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/db/MysqlConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/db/MysqlConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/AddBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/AddBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/DownloadCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadExcelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/DownloadExcelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/GenerateCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/GenerateCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/Pdf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/PdfServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/RenewBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/RenewBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/ReturnBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ReturnBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/SearchBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/StudentLibraryDetailsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentLibraryDetailsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/allBooksServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/booksCSVServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/booksCSVServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/BorrowBookServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/FetchData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/AccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/CodeVerificationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/CodeVerificationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ForgotPasswordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ForgotPasswordServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/NewPasswordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/NewPasswordServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/RegisterAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/RegisterAccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ResendCodeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ResendCodeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UpdateAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/UpdateAccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/UserLoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/loginFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule/Name.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/body.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/body.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/links.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/links.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/SearchBookById.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/SearchBookById.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/StudentBorrowedBooksDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/StudentBorrowedBooksDetails.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/allBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/allBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/book.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/issues/returnBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/issues/returnBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/publishers/addPublisher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/publishers/addPublisher.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/UNDERSTANDING-PENSIONS-BY-CPA-ODUNDO.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/franco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/img/im4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/AuthorI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBeanI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/BookBeanI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/Beans/IssueI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/AddBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/db/MysqlConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/db/MysqlConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/StudentLibraryDetailsServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/controllers/Books/allBooksServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Issue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/library/Issue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/studentmodule/Name.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/BookWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/BookWs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/IssueWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/com/systechInterns/webservices/IssueWs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/includes/body.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/includes/body.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/includes/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/AddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/AddBook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/BorrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/BorrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/SearchBookById.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/SearchBookById.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/StudentBorrowedBooksDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/StudentBorrowedBooksDetails.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/allBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/allBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/book.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/books/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/books/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/issues/returnBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/issues/returnBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SchoolManagement/views/publishers/addPublisher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SchoolManagement/views/publishers/addPublisher.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/AuthorI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBeanI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/BookBeanI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/Beans/IssueI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/AddBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/db/MysqlConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/db/MysqlConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/AddBookServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/ReturnBookServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/SearchBookServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/StudentLibraryDetailsServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/controllers/Books/allBooksServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Issue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/library/Issue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/studentmodule/Name.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/BookWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/BookWs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/IssueWs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/systechInterns/webservices/IssueWs.class" afterDir="false" />
     </list>
@@ -155,26 +164,31 @@
     <session id="692432983">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.101" value="1" />
+          <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.108" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.116" value="1" />
           <entry key="project.open.time.121" value="1" />
           <entry key="project.open.time.15" value="3" />
-          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.35" value="2" />
+          <entry key="project.open.time.37" value="3" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.73" value="3" />
@@ -184,91 +198,99 @@
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.79" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.81" value="1" />
+          <entry key="project.open.time.80" value="1" />
+          <entry key="project.open.time.81" value="2" />
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.84" value="1" />
+          <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.86" value="1" />
-          <entry key="project.open.time.87" value="2" />
+          <entry key="project.open.time.87" value="3" />
           <entry key="project.open.time.89" value="2" />
           <entry key="project.open.time.91" value="1" />
           <entry key="project.open.time.93" value="1" />
-          <entry key="project.open.time.94" value="1" />
+          <entry key="project.open.time.94" value="2" />
           <entry key="project.open.time.95" value="1" />
-          <entry key="project.open.time.97" value="1" />
-          <entry key="project.opened" value="51" />
+          <entry key="project.open.time.97" value="3" />
+          <entry key="project.opened" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="EndPointers" value="1" />
+          <entry key="EndPointers" value="2" />
           <entry key="Student" value="1" />
-          <entry key="class" value="6" />
-          <entry key="gitignore" value="1" />
+          <entry key="class" value="7" />
+          <entry key="gitignore" value="2" />
+          <entry key="html" value="7" />
           <entry key="iml" value="1" />
-          <entry key="java" value="911" />
+          <entry key="java" value="1144" />
           <entry key="js" value="2" />
-          <entry key="jsp" value="386" />
+          <entry key="jsp" value="544" />
+          <entry key="less" value="1" />
           <entry key="md" value="1" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="3" />
-          <entry key="tbl_authors" value="3" />
+          <entry key="tbl_authors" value="7" />
           <entry key="tbl_bookreturns" value="1" />
-          <entry key="tbl_books" value="47" />
-          <entry key="tbl_books_tbl_authors" value="4" />
-          <entry key="tbl_code" value="11" />
+          <entry key="tbl_books" value="58" />
+          <entry key="tbl_books_tbl_authors" value="5" />
+          <entry key="tbl_code" value="20" />
           <entry key="tbl_course_units" value="1" />
           <entry key="tbl_courses" value="4" />
           <entry key="tbl_exam_results" value="1" />
           <entry key="tbl_fees" value="1" />
-          <entry key="tbl_issues" value="44" />
-          <entry key="tbl_login" value="54" />
+          <entry key="tbl_issues" value="48" />
+          <entry key="tbl_login" value="65" />
           <entry key="tbl_publishers" value="1" />
           <entry key="tbl_students" value="7" />
           <entry key="text" value="3" />
           <entry key="ts" value="1" />
-          <entry key="xml" value="38" />
+          <entry key="xml" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="Database Element" value="181" />
+          <entry key="CLASS" value="7" />
+          <entry key="Database Element" value="222" />
+          <entry key="HTML" value="7" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="911" />
-          <entry key="JSP" value="386" />
+          <entry key="JAVA" value="1144" />
+          <entry key="JSP" value="544" />
           <entry key="JavaScript" value="2" />
+          <entry key="Less" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="RNG Compact" value="1" />
           <entry key="Scratch" value="3" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="38" />
+          <entry key="XML" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="833" />
-          <entry key="dummy" value="71" />
-          <entry key="java" value="34955" />
+          <entry key="cell" value="917" />
+          <entry key="dummy" value="109" />
+          <entry key="html" value="354" />
+          <entry key="java" value="41405" />
           <entry key="js" value="2" />
-          <entry key="jsp" value="8447" />
+          <entry key="jsp" value="13153" />
           <entry key="md" value="151" />
           <entry key="sql" value="11" />
           <entry key="text" value="4" />
           <entry key="txt" value="4" />
-          <entry key="xml" value="280" />
+          <entry key="xml" value="320" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="34955" />
-          <entry key="JSP" value="8447" />
+          <entry key="HTML" value="354" />
+          <entry key="JAVA" value="41405" />
+          <entry key="JSP" value="13153" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="151" />
-          <entry key="PLAIN_TEXT" value="79" />
-          <entry key="Scratch" value="844" />
-          <entry key="XML" value="280" />
+          <entry key="PLAIN_TEXT" value="117" />
+          <entry key="Scratch" value="928" />
+          <entry key="XML" value="320" />
         </counts>
       </usages-collector>
     </session>
@@ -279,46 +301,94 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBeanI.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/AddBookServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UserLoginServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/dashboard/LibrarianDashboard.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="61" column="31" lean-forward="true" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="282">
+              <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ResendCodeServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ResendCodeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="232">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="44" column="48" lean-forward="true" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/DownloadBooks.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/student/LibBooksView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2175">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
             </state>
           </provider>
         </entry>
@@ -331,11 +401,17 @@
         <option value="cdi.beans_1_1" />
         <option value="yet_unknown" />
         <option value="JavaScript File" />
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/stuDetails</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -343,57 +419,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/includes/links.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/message.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/NewPasswordServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/includes/alerts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/Example.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UploadImage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ServletFileUpload.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/UpdateProfile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/ErrorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/errors/loginError.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/LoginErrorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ForgotPasswordServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/contact/contact.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/l.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/L.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/UserLoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UpdateAccountServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/FileUpload.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/RegisterAccountServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/booksCSVServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadCsv.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/GenerateCSV.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/books/bookpdf.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadPdfServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/includes/body.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/includes/btn.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadExcelServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/Pdf.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/PdfServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/RegisterAccountServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/books/allBooks.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/student/AddStudent.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/exam/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/exam/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/dashboard/LibrarianDashboard.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/books/studentTable.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/books/BorrowBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/BorrowBookServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ListBooks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/student/StudentBooksViewServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/allBooksServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/student/StudentAllBooksServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/librarian/LibrarianBooksServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/books/DownloadBooks.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/bookResults.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AccountServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailUtility.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/SendMail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ForgotPasswordServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/codeverification.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBeanI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBeanI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/AccountServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/student/studentDash.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/student/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ReturnBookServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/student/StudentLibraryDetailsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentLibraryDetailsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/student/studentTable.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/extra/l.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/errors/errorPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/RandomString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/CodeVerificationServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UserLoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ResendCodeServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/AddBookServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/student/LibBooksView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/books/DownloadBooks.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/BorrowBookServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java" />
       </list>
     </option>
   </component>
@@ -417,10 +493,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="156" />
-    <option name="y" value="50" />
-    <option name="width" value="1195" />
-    <option name="height" value="713" />
+    <option name="x" value="143" />
+    <option name="y" value="33" />
+    <option name="width" value="1221" />
+    <option name="height" value="734" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -428,6 +504,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -468,7 +546,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="Beans" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -477,7 +555,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="systechInterns" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -493,47 +571,41 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="userLogin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="redshift&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573477681478" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574772722284" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/infobip-api-java-demo" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BulkySms" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/systechInterns/TwoFactorAuthentication" />
       <recent name="$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/books" />
       <recent name="$PROJECT_DIR$/src/main/java/com/systechInterns/studentmodule" />
       <recent name="$PROJECT_DIR$/src/main/java/com/systechInterns/Beans" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/systechInterns" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/views/student" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views/books" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -683,8 +755,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RandomString" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.RandomString" />
         <item itemvalue="Application.Example" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LibrarianLogin" />
@@ -751,18 +823,33 @@
       <workItem from="1573012882691" duration="8049000" />
       <workItem from="1573101262062" duration="8204000" />
       <workItem from="1573132904912" duration="34365000" />
-      <workItem from="1573444390572" duration="26284000" />
+      <workItem from="1573444390572" duration="32338000" />
+      <workItem from="1573537622548" duration="10644000" />
+      <workItem from="1573565913918" duration="3107000" />
+      <workItem from="1573620763827" duration="14999000" />
+      <workItem from="1573704956405" duration="35687000" />
+      <workItem from="1573897382716" duration="2477000" />
+      <workItem from="1573976156008" duration="4097000" />
+      <workItem from="1574047935299" duration="6503000" />
+      <workItem from="1574136045219" duration="12893000" />
+      <workItem from="1574223425189" duration="29568000" />
+      <workItem from="1574308587686" duration="18833000" />
+      <workItem from="1574357086779" duration="3004000" />
+      <workItem from="1574396740846" duration="21487000" />
+      <workItem from="1574592404250" duration="10476000" />
+      <workItem from="1574656235667" duration="834000" />
+      <workItem from="1574769722662" duration="2719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="518911000" />
+    <option name="totallyTimeSpent" value="702293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="156" y="50" width="1195" height="713" extended-state="0" />
+    <frame x="143" y="33" width="1221" height="734" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.19582245" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.2068085" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -772,22 +859,22 @@
       <window_info id="Web" order="7" sideWeight="0.50357145" side_tool="true" weight="0.26501766" />
       <window_info id="Persistence" order="8" sideWeight="0.50357145" side_tool="true" weight="0.26501766" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32761577" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.60034305" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.56946826" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.5115894" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32733223" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.62193125" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.62092626" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50151515" side_tool="true" weight="0.5725938" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.24699828" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.6089194" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32933104" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3284553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Database" order="1" weight="0.21496955" />
+      <window_info anchor="right" id="Database" order="1" weight="0.17787234" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24978241" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -800,7 +887,7 @@
       <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.19234116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.16884246" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -810,16 +897,16 @@
       <window_info id="Web" order="7" sideWeight="0.50357145" side_tool="true" weight="0.26501766" />
       <window_info id="Persistence" order="8" sideWeight="0.50357145" side_tool="true" weight="0.26501766" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848485" weight="0.44425386" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32761577" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.2761578" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32733223" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.62193125" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.62092626" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50151515" side_tool="true" weight="0.5725938" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.5403088" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.24699828" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
@@ -861,7 +948,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp</url>
-          <line>14</line>
+          <line>15</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -870,6 +957,12 @@
           <line>10</line>
           <properties />
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java</url>
@@ -881,7 +974,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java</url>
-          <line>23</line>
+          <line>24</line>
           <properties class="com.systechInterns.Beans.BookBeanI" method="returnBook">
             <option name="EMULATED" value="true" />
           </properties>
@@ -895,6 +988,14 @@
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java</url>
+          <line>43</line>
+          <properties class="com.systechInterns.Beans.IssueI" method="calculateFine">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -903,408 +1004,334 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/FileUpload.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/downloads/PdfServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="64" column="57" lean-forward="true" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/StudentBorrowedBooksDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentBooksViewServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-end-line="9" />
+        <state relative-caret-position="111">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentAllBooksServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="196">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/text">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/BookWs.java">
+    <entry file="jar:///usr/lib/jvm/java-11-oracle/lib/src.zip!/java.sql/java/sql/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
+        <state relative-caret-position="185">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/db/MysqlConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1294">
-          <caret line="16931" column="12" selection-start-line="16931" selection-start-column="12" selection-end-line="16931" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_login">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="225">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/body.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1363">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="-968" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/links.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp">
+    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_login" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="10" selection-start-line="10" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="52">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/btn.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/AccountServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1095">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/booksCSVServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadExcelServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/Pdf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/bookpdf.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/PdfServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/GenerateCSV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/DownloadCsv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="360">
+          <caret line="34" column="77" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+        <state relative-caret-position="270">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/profile.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/newPass.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="40" column="15" lean-forward="true" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        <state relative-caret-position="345">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/DownloadBooks.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/librarian/LibrarianBooksServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/SearchBookById.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/student.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        <state relative-caret-position="120">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/bookResults.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/error/ErrorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="28" column="135" selection-start-line="28" selection-start-column="135" selection-end-line="28" selection-end-column="135" />
+        <state relative-caret-position="60">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/SearchBookServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ReturnBookServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+        <state relative-caret-position="174">
+          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/student/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
+        <state relative-caret-position="397">
+          <caret line="191" column="48" selection-start-line="191" selection-start-column="48" selection-end-line="191" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="30" column="77" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ForgotPasswordServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/NewPasswordServlet.java">
+    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_issues" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/studentDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/roles/student/StudentLibraryDetailsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="8" selection-start-line="8" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="e#165#172#0" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/AddBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/student/StudentLibraryDetailsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/includes/navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/student/studentDash.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="157" column="74" selection-start-line="157" selection-start-column="74" selection-end-line="157" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/student/studentTable.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/extra/l.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="111" column="33" lean-forward="true" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBeanI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="195">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/CodeVerificationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        <state relative-caret-position="38">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBeanI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/AccountServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/IssueBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="42">
+          <caret line="108" column="109" selection-start-line="108" selection-start-column="109" selection-end-line="108" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/BookBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="189" column="44" lean-forward="true" selection-start-line="189" selection-start-column="44" selection-end-line="189" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/errors/errorPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/LoginBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="71" column="70" lean-forward="true" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/AuthorBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/EndPointers" />
+    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_authors" />
+    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_books" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/BorrowBookServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/ListBooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/Bean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/webservices/IssueWs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        <state relative-caret-position="2415">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/Books/generalBook/AddBookServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/books/DownloadBooks.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/student/LibBooksView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-11-oracle/lib/src.zip!/java.base/java/util/Random.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/RandomString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/CodeVerificationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="71" column="90" selection-start-line="71" selection-start-column="90" selection-end-line="71" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1365">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/librarian.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserRandomCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userLogin/codeverification.jsp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBeanI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/dashboard/LibrarianDashboard.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="das://9cbd136e-78f0-4278-afaa-4aa6a3299ed7/schema/Scm/table/tbl_code">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/UserLogin.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="44" column="48" lean-forward="true" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/UserLoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/library/EmailFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="61" column="31" lean-forward="true" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        <state relative-caret-position="282">
+          <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/Beans/CodeBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/basicAuth/ResendCodeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/systechInterns/controllers/login/ResendCodeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="232">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,7 @@ import java.util.List;
 @Local
 public interface BookBeanI extends BeanI<Book> {
     List<Book> readAll() throws SQLException;
+    Book findAll() throws SQLException;
     Book findByName(String name);
     List<Book> findById(long id);
     List<Book> getBorrowedBooks();
