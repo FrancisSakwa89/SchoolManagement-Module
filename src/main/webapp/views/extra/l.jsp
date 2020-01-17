@@ -105,6 +105,7 @@
         height: 100%; }
 
     body {
+
         background-image: url("https://mdbootstrap.com/wp-content/uploads/2019/02/back.jpg");
         background-position: center;
         background-repeat: no-repeat;
